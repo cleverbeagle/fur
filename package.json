@@ -25,12 +25,15 @@
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
     "eslint": "5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
     "eslint-config-react-app": "^3.0.4",
     "eslint-loader": "2.1.1",
     "eslint-plugin-flowtype": "2.50.1",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
-    "eslint-plugin-react": "7.11.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.1",
     "file-loader": "2.0.0",
     "fs-extra": "7.0.0",
     "html-webpack-plugin": "4.0.0-alpha.2",
@@ -72,6 +75,8 @@
     "babel-core": "^6.26.3",
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-runtime": "^6.26.0",
+    "husky": "^1.1.2",
+    "lint-staged": "^7.3.0",
     "react-test-renderer": "^16.6.0",
     "storybook-addon-jsx": "^5.4.0",
     "storybook-readme": "^4.0.2"
@@ -95,7 +100,36 @@
     }
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "prettier",
+      "react"
+    ],
+    "extends": [
+      "react-app",
+      "airbnb",
+      "plugin:prettier/recommended",
+      "plugin:react/recommended"
+    ],
+    "rules": {
+      "import/no-extraneous-dependencies": "off",
+      "react/jsx-filename-extension": "off"
+    }
+  },
+  "eslintIgnore": [
+    "config/*.js",
+    "config/jest/*.js",
+    "scripts/*.js"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "jest": {
     "collectCoverageFrom": [
@@ -133,5 +167,26 @@
       "jsx",
       "node"
     ]
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "./.githooks/pre-commit.sh",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "printWidth": 100,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "arrowParens": "always",
+    "rangeStart": 0,
+    "rangeEnd": "Infinity",
+    "parser": "babylon",
+    "proseWrap": "preserve"
   }
 }
