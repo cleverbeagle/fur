@@ -16,4 +16,10 @@ storiesOf('Button', module)
     <Button onClick={action('clicked')}>
       {text('Button Text', 'Click me')}
     </Button>
-  ));
+  ))
+  .addWithJSX('with jsx in panel', () => (
+    <Button>
+      This button does nothing
+    </Button>
+  ))
+;

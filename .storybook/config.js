@@ -1,6 +1,10 @@
-import { configure, addDecorator } from '@storybook/react';
+import { configure, addDecorator, setAddon } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withOptions } from '@storybook/addon-options';
+
+import JSXAddon from 'storybook-addon-jsx';
+
+setAddon(JSXAddon);
 
 if (process.env.NODE_ENV === 'test') {
   require('babel-plugin-require-context-hook/register')();
