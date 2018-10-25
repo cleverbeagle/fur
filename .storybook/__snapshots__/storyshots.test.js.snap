@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button with action 1`] = `
+<button>
+  Hello Button
+</button>
+`;
+
+exports[`Storyshots Button with knobs 1`] = `
+<button>
+  Click me
+</button>
+`;
