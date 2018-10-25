@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { text } from '@storybook/addon-knobs/react';
 
-import Button from './Button';
+import Button from './';
 
 import ButtonReadme from './Button.readme.md';
 import { withReadme, withDocs } from 'storybook-readme';

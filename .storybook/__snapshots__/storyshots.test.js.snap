@@ -6,8 +6,53 @@ exports[`Storyshots Button with action 1`] = `
 </button>
 `;
 
+exports[`Storyshots Button with jsx in panel 1`] = `
+<button>
+  This button does nothing
+</button>
+`;
+
 exports[`Storyshots Button with knobs 1`] = `
 <button>
   Click me
 </button>
+`;
+
+exports[`Storyshots Button with readme 1`] = `
+<div
+  className="storybook-readme-story"
+  style={
+    Object {
+      "padding": "8px",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "backgroundColor": "#ffffff",
+        "border": "1px dashed #e5e5e5",
+        "boxSizing": "border-box",
+        "margin": "16px 0 16px 0",
+        "padding": "50px 35px",
+        "position": "relative",
+        "textAlign": "center",
+        "transition": "background-color 0.2s",
+      }
+    }
+  >
+    <button>
+      No click button for readme
+    </button>
+  </div>
+  <div
+    className="markdown-body"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<p>Button.readme.md</p>
+",
+      }
+    }
+  />
+</div>
 `;
