@@ -6,6 +6,9 @@ import { text } from '@storybook/addon-knobs/react';
 
 import Button from './Button';
 
+import ButtonReadme from './Button.readme.md';
+import { withReadme, withDocs } from 'storybook-readme';
+
 storiesOf('Button', module)
   .add('with action', () => (
     <Button onClick={action('clicked')}>
@@ -20,6 +23,12 @@ storiesOf('Button', module)
   .addWithJSX('with jsx in panel', () => (
     <Button>
       This button does nothing
+    </Button>
+  ))
+  .addDecorator(withDocs(ButtonReadme))
+  .add('with readme', () => (
+    <Button>
+      No click button for readme
     </Button>
   ))
 ;

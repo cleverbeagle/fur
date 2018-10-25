@@ -73,7 +73,8 @@
     "babel-plugin-require-context-hook": "^1.0.0",
     "babel-runtime": "^6.26.0",
     "react-test-renderer": "^16.6.0",
-    "storybook-addon-jsx": "^5.4.0"
+    "storybook-addon-jsx": "^5.4.0",
+    "storybook-readme": "^4.0.2"
   },
   "browserslist": [
     ">0.2%",
