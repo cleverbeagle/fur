@@ -88,6 +88,8 @@
   }
 
   .fur-navigation-horizontal > .fur-user-menu {
+    position: relative;
+    top: -1px;
     margin-right: 0;
   }
 

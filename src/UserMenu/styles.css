@@ -5,6 +5,7 @@
 .fur-user-menu > button {
   padding: 5px 10px;
   background: #fff;
+  border: none;
 }
 
 .fur-user-menu > button > img {
