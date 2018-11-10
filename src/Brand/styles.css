@@ -1,0 +1,8 @@
+.fur-brand {
+  font-size: 18px;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 8px 10px;
+  color: var(--primary);
+}

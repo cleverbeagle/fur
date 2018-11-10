@@ -1,0 +1,97 @@
+.fur-navigation-horizontal {
+  background: #fff;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
+  height: 60px;
+  padding: 11px 10px;
+}
+
+.fur-navigation-horizontal > .fur-navigation-toggle {
+  float: right;
+}
+
+.fur-navigation-horizontal > .fur-navigation-items {
+  position: fixed;
+  top: 61px;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  width: 275px;
+  padding: 10px;
+  box-shadow: -1px 0 0 0 rgba(0, 0, 0, 0.06);
+  transform: translateX(260px);
+  opacity: 0;
+  transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+}
+
+.fur-navigation-horizontal.fur-navigation-open > .fur-navigation-items {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.fur-navigation-horizontal > .fur-user-menu {
+  float: right;
+  margin-right: 10px;
+}
+
+.fur-navigation-horizontal > .fur-user-menu > button > span {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .fur-navigation-horizontal > .fur-brand {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .fur-navigation-horizontal > .fur-navigation-toggle {
+    display: none;
+  }
+
+  .fur-navigation-horizontal > .fur-navigation-items {
+    float: left;
+    position: static;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    padding: 0;
+  }
+
+  .fur-navigation-horizontal > .fur-navigation-items > .fur-navigation-item {
+    display: inline-block;
+    position: relative;
+  }
+
+  .fur-navigation-horizontal > .fur-navigation-items > .fur-navigation-item > .fur-navigation-items {
+    display: none;
+    position: absolute;
+    background: #fff;
+    margin: 5px 0 0;
+    padding: 10px;
+    box-shadow: none;
+    min-width: 200px;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
+    border-radius: 3px;
+  }
+
+  .fur-navigation-horizontal > .fur-navigation-items > .fur-navigation-item > .fur-navigation-items:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: transparent;
+    bottom: 100%;
+  }
+
+  .fur-navigation-horizontal > .fur-navigation-items > .fur-navigation-item:hover > .fur-navigation-items {
+    display: block;
+  }
+
+  .fur-navigation-horizontal > .fur-user-menu {
+    margin-right: 0;
+  }
+
+  .fur-navigation-horizontal > .fur-user-menu > button > span {
+    display: inline-block;
+  }
+}

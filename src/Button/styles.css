@@ -1,0 +1,31 @@
+.fur-button {
+  background: none;
+  border: none;
+  color: var(--black);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  height: 38px;
+  padding: 0 18px;
+  border-radius: 3px;
+}
+
+.fur-button:hover {
+  cursor: pointer;
+}
+
+.fur-button:hover,
+.fur-buttona:active,
+.fur-button:focus {
+  outline: 0;
+}
+
+.fur-button:active {
+  position: relative;
+  opacity: 0.8;
+  top: 1px;
+}
+
+.fur-button-default {
+  border: 1px solid #E2E5ED;
+}

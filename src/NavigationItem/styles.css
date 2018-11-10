@@ -1,0 +1,30 @@
+.fur-navigation-item > button {
+  padding: 12px 15px;
+  font-size: 14px;
+  line-height: 13px;
+  border: none;
+  background: transparent;
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: var(--black);
+  border-radius: 3px;
+}
+
+.fur-navigation-item > button:active,
+.fur-navigation-item > button:focus {
+  outline: 0;
+}
+
+.fur-navigation-item > button:hover {
+  color: var(--primary);
+  background: rgba(84, 147, 245, 0.05);
+  cursor: pointer;
+}
+
+.fur-navigation-item > .fur-navigation-items {
+  position: relative;
+  padding: 0 10px;
+  margin: 10px 0 10px 20px;
+  box-shadow: -4px 0 0 0 rgba(0, 0, 0, 0.03);
+}
