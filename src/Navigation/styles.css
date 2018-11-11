@@ -3,13 +3,16 @@
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
   height: 60px;
   padding: 11px 10px;
+  margin-bottom: 20px;
 }
 
-.fur-navigation-horizontal > .fur-navigation-toggle {
+.fur-navigation-horizontal > .fur-navigation-toggle,
+.fur-navigation-horizontal > .fur-grid-container > .fur-navigation-toggle {
   float: right;
 }
 
-.fur-navigation-horizontal > .fur-navigation-items {
+.fur-navigation-horizontal > .fur-navigation-items,
+.fur-navigation-horizontal > .fur-grid-container > .fur-navigation-items {
   position: fixed;
   top: 61px;
   bottom: 0;
@@ -23,32 +26,39 @@
   transition: transform .4s ease-in-out, opacity .4s ease-in-out;
 }
 
-.fur-navigation-horizontal.fur-navigation-open > .fur-navigation-items {
+.fur-navigation-horizontal.fur-navigation-open > .fur-navigation-items,
+.fur-navigation-horizontal.fur-navigation-open > .fur-grid-container > .fur-navigation-items {
   transform: translateX(0px);
   opacity: 1;
 }
 
-.fur-navigation-horizontal > .fur-user-menu {
+.fur-navigation-horizontal > .fur-user-menu,
+.fur-navigation-horizontal > .fur-grid-container > .fur-user-menu {
   float: right;
   margin-right: 10px;
 }
 
-.fur-navigation-horizontal > .fur-user-menu > button > span {
+.fur-navigation-horizontal > .fur-user-menu > button > span,
+.fur-navigation-horizontal > .fur-grid-container > .fur-user-menu > button > span {
   display: none;
 }
 
 @media screen and (min-width: 992px) {
-  .fur-navigation-horizontal > .fur-brand {
+  .fur-navigation-horizontal > .fur-brand,
+  .fur-navigation-horizontal > .fur-grid-container > .fur-brand {
     float: left;
     margin-right: 10px;
   }
 
-  .fur-navigation-horizontal > .fur-navigation-toggle {
+  .fur-navigation-horizontal > .fur-navigation-toggle,
+  .fur-navigation-horizontal > .fur-grid-container > .fur-navigation-toggle {
     display: none;
   }
 
-  .fur-navigation-horizontal > .fur-navigation-items {
+  .fur-navigation-horizontal > .fur-navigation-items,
+  .fur-navigation-horizontal > .fur-grid-container > .fur-navigation-items {
     float: left;
+    width: auto;
     position: static;
     box-shadow: none;
     transform: none;
@@ -56,12 +66,14 @@
     padding: 0;
   }
 
-  .fur-navigation-horizontal > .fur-navigation-items > .fur-navigation-item {
+  .fur-navigation-horizontal > .fur-navigation-items > .fur-navigation-item,
+  .fur-navigation-horizontal > .fur-grid-container > .fur-navigation-items > .fur-navigation-item {
     display: inline-block;
     position: relative;
   }
 
-  .fur-navigation-horizontal > .fur-navigation-items > .fur-navigation-item > .fur-navigation-items {
+  .fur-navigation-horizontal > .fur-navigation-items > .fur-navigation-item > .fur-navigation-items,
+  .fur-navigation-horizontal > .fur-grid-container > .fur-navigation-items > .fur-navigation-item > .fur-navigation-items {
     display: none;
     position: absolute;
     background: #fff;
@@ -73,7 +85,8 @@
     border-radius: 3px;
   }
 
-  .fur-navigation-horizontal > .fur-navigation-items > .fur-navigation-item > .fur-navigation-items:before {
+  .fur-navigation-horizontal > .fur-navigation-items > .fur-navigation-item > .fur-navigation-items:before,
+  .fur-navigation-horizontal > .fur-grid-container > .fur-navigation-items > .fur-navigation-item > .fur-navigation-items:before {
     content: "";
     position: absolute;
     left: 0;
@@ -83,17 +96,20 @@
     bottom: 100%;
   }
 
-  .fur-navigation-horizontal > .fur-navigation-items > .fur-navigation-item:hover > .fur-navigation-items {
+  .fur-navigation-horizontal > .fur-navigation-items > .fur-navigation-item:hover > .fur-navigation-items,
+  .fur-navigation-horizontal > .fur-grid-container > .fur-navigation-items > .fur-navigation-item:hover > .fur-navigation-items {
     display: block;
   }
 
-  .fur-navigation-horizontal > .fur-user-menu {
+  .fur-navigation-horizontal > .fur-user-menu,
+  .fur-navigation-horizontal > .fur-grid-container > .fur-user-menu {
     position: relative;
     top: -1px;
     margin-right: 0;
   }
 
-  .fur-navigation-horizontal > .fur-user-menu > button > span {
+  .fur-navigation-horizontal > .fur-user-menu > button > span,
+  .fur-navigation-horizontal > .fur-grid-container > .fur-user-menu > button > span {
     display: inline-block;
   }
 }

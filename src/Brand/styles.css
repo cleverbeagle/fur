@@ -6,3 +6,7 @@
   padding: 8px 10px;
   color: var(--primary);
 }
+
+.fur-brand:hover {
+  cursor: pointer;
+}

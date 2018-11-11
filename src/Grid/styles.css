@@ -1,0 +1,21 @@
+.fur-grid-container {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .fur-grid-container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .fur-grid-container {
+    max-width: 992px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .fur-grid-container {
+    max-width: 1200px;
+  }
+}
