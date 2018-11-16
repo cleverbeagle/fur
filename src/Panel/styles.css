@@ -1,0 +1,25 @@
+.fur-panel {
+  background: #fff;
+  box-shadow: 0 0 0 1px var(--black-light);
+  border-radius: 3px;
+}
+
+.fur-panel-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--black-light);
+  font-size: 16px;
+}
+
+.fur-panel-header > h1,
+.fur-panel-header > h2,
+.fur-panel-header > h3,
+.fur-panel-header > h4,
+.fur-panel-header > h5,
+.fur-panel-header > h6,
+.fur-panel-header > p {
+  font-size: 18px;
+}
+
+.fur-panel-body {
+  padding: 20px;
+}

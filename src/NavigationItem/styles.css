@@ -16,7 +16,8 @@
   outline: 0;
 }
 
-.fur-navigation-item > button:hover {
+.fur-navigation-item > button:hover,
+.fur-navigation-item-active > button {
   color: var(--primary);
   background: rgba(84, 147, 245, 0.05);
   cursor: pointer;
