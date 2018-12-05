@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './styles.css';
-
 const Panel = ({ children }) => <div className="fur-panel">{children}</div>;
 const PanelHeader = ({ children }) => <div className="fur-panel-header">{children}</div>;
 const PanelBody = ({ children }) => <div className="fur-panel-body">{children}</div>;

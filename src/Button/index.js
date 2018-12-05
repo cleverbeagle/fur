@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import classNames from 'classnames';
 
-import './styles.css';
-
-const Button = ({ className, children, onClick, onMouseOver, onMouseOut, theme }) => (
+const Button = ({ className, children, onClick, onMouseOver, onMouseOut, theme, block }) => (
   <button
     onClick={onClick}
     onMouseOver={onMouseOver}
@@ -11,7 +10,12 @@ const Button = ({ className, children, onClick, onMouseOver, onMouseOut, theme }
     onMouseOut={onMouseOut}
     onBlur={onMouseOut}
     type="button"
-    className={`fur-button fur-button-${theme || 'default'} ${className}`}
+    className={classNames(
+      'fur-button',
+      `fur-button-${theme || 'default'}`,
+      { 'fur-button-block': block },
+      className,
+    )}
   >
     {children}
   </button>
@@ -21,6 +25,7 @@ Button.defaultProps = {
   onClick: null,
   onMouseOver: null,
   onMouseOut: null,
+  block: false,
 };
 
 Button.propTypes = {
@@ -30,6 +35,7 @@ Button.propTypes = {
   onMouseOver: PropTypes.func,
   onMouseOut: PropTypes.func,
   theme: PropTypes.string.isRequired,
+  block: PropTypes.bool,
 };
 
 export default Button;

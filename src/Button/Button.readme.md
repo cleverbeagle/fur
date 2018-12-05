@@ -1,5 +1,0 @@
-# Button
-
-<!-- STORY -->
-
-## Usage

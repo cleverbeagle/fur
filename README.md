@@ -1,3 +1,4 @@
-# Fur by Clever Beagle
+## Fur
+The Ultimate UI Kit for Products
 
-[The Ultimate UI Kit for Products. Check out Fur here](https://cleverbeagle.com/fur)
+[Read the Documentation](https://cleverbeagle.com/fur)

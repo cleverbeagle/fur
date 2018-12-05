@@ -1,0 +1,17 @@
+.fur-navigation-toggle {
+  padding: 11px 12px;
+  height: auto;
+  font-size: 12px;
+}
+
+.fur-navigation-toggle span {
+  width: 25px;
+  height: 3px;
+  display: block;
+  background: var(--black);
+  border-radius: 2px;
+}
+
+.fur-navigation-toggle span:not(:last-child) {
+  margin-bottom: 3px;
+}

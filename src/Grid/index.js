@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import './styles.css';
-
 const mapGlobalPropsToChildren = ({ children, ...rest }) =>
   React.Children.map(children, (child) => React.cloneElement(child, { ...rest }));
 

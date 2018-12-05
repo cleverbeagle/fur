@@ -4,7 +4,9 @@ import Button from '../Button';
 
 const NavigationToggle = ({ toggleNavigation }) => (
   <Button className="fur-navigation-toggle" onClick={toggleNavigation}>
-    Menu
+    <span />
+    <span />
+    <span />
   </Button>
 );
 

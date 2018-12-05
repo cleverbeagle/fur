@@ -4,6 +4,8 @@ import { withOptions } from '@storybook/addon-options';
 
 import JSXAddon from 'storybook-addon-jsx';
 
+import '../src/index.css';
+
 setAddon(JSXAddon);
 
 if (process.env.NODE_ENV === 'test') {
@@ -20,9 +22,9 @@ addDecorator(withKnobs);
 
 addDecorator(withOptions({
   // name to display in the top left corner
-  name: 'Fur - Clever Beagle',
+  name: 'Fur',
   // URL for name in top left corner to link to
-  url: 'https://cleverbeagle.com',
+  url: 'https://cleverbeagle.com/fur',
   // show story component as full screen
   goFullScreen: false,
   // display panel that shows a list of stories

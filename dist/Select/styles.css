@@ -1,0 +1,39 @@
+.fur-form-select {
+  position: relative;
+}
+
+.fur-form-select:after {
+  position: absolute;
+  right: 15px;
+  top: 20px;
+  content: "";
+  display: block;
+  width: 0; 
+  height: 0; 
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid var(--black-medium);
+}
+
+.fur-form-select select {
+  color: var(--black-dark);
+  border: 1px solid var(--black-light);
+  border-radius: 3px;
+  display: block;
+  width: 100%;
+  background: transparent;
+  padding: 10px 15px;
+  height: 48px;
+  font-size: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: 0px 0px 1px 1px rgba(103, 109, 132, 0.02);
+}
+
+.fur-form-select select:focus {
+  outline: 0;
+  border: 1px solid var(--primary);
+  box-shadow: 0px 0px 1px 1px rgba(66, 133, 244, 0.3);
+  color: var(--black-dark);
+}

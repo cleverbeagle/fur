@@ -1,18 +1,18 @@
 {
-  "name": "fur",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@cleverbeagle/fur",
+  "version": "0.0.1",
+  "description": "The ultimate UI kit for products.",
+  "main": "dist/index.min.js",
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
+    "build": "rm -rf ./dist && babel src -d ./dist --ignore src/index.test.js,src/**/*.stories.js && uglifyjs dist/index.js -o dist/index.min.js --compress --mangle && cpx 'src/**/*.css' dist && cpx 'src/fonts/*.woff' dist/fonts && cat src/global.css src/**/*.css > dist/fur.css",
+    "dev": "babel src -d ./dist --watch --ignore src/index.test.js",
+    "test": "jest --watch --verbose false",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
   "dependencies": {
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",
-    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.4",
@@ -39,7 +39,6 @@
     "fs-extra": "7.0.0",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
-    "jest": "23.6.0",
     "jest-pnp-resolver": "1.0.1",
     "jest-resolve": "23.6.0",
     "mini-css-extract-plugin": "0.4.3",
@@ -65,6 +64,11 @@
     "workbox-webpack-plugin": "3.6.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-proposal-export-default-from": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^4.0.0-alpha.25",
     "@storybook/addon-knobs": "^4.0.0-alpha.25",
     "@storybook/addon-links": "^4.0.0-alpha.25",
@@ -73,14 +77,15 @@
     "@storybook/addon-viewport": "^4.0.0-alpha.25",
     "@storybook/addons": "^4.0.0-alpha.25",
     "@storybook/react": "^4.0.0-alpha.25",
-    "babel-core": "^6.26.3",
-    "babel-plugin-require-context-hook": "^1.0.0",
-    "babel-runtime": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "cpx": "^1.5.0",
     "husky": "^1.1.2",
+    "jest": "^23.6.0",
     "lint-staged": "^7.3.0",
     "react-test-renderer": "^16.6.0",
     "storybook-addon-jsx": "^5.4.0",
-    "storybook-readme": "^4.0.2"
+    "storybook-readme": "^4.0.2",
+    "uglifyjs": "^2.4.11"
   },
   "browserslist": [
     ">0.2%",
@@ -88,18 +93,6 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "babel": {
-    "presets": [
-      "react-app"
-    ],
-    "env": {
-      "test": {
-        "plugins": [
-          "require-context-hook"
-        ]
-      }
-    }
-  },
   "eslintConfig": {
     "parser": "babel-eslint",
     "parserOptions": {
@@ -127,11 +120,6 @@
     "config/jest/*.js",
     "scripts/*.js"
   ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"

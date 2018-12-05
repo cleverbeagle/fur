@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import './styles.css';
+import NavigationItems from '../NavigationItems';
+import NavigationItem from '../NavigationItem';
+import UserNavigationItem from '../UserNavigationItem';
+import NavigationToggle from '../NavigationToggle';
 
 class Navigation extends React.Component {
   state = { open: false };
@@ -29,5 +31,10 @@ Navigation.propTypes = {
   children: PropTypes.node.isRequired,
   orientation: PropTypes.oneOf(['horizontal', 'vertical']).isRequired,
 };
+
+Navigation.Items = NavigationItems;
+Navigation.Item = NavigationItem;
+Navigation.User = UserNavigationItem;
+Navigation.Toggle = NavigationToggle;
 
 export default Navigation;

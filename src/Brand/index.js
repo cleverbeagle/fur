@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './styles.css';
-
 const Brand = ({ onClick, children }) => (
   <button type="button" className="fur-brand" onClick={onClick}>
     {children}

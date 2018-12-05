@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import './styles.css';
-
-const NavigationItem = ({ active, divider, label, onClick, children }) => (
+const NavigationItem = ({ active, divider, label, onClick, children, downArrow }) => (
   <li
     className={classNames(
       'fur-navigation-item',
@@ -16,6 +14,7 @@ const NavigationItem = ({ active, divider, label, onClick, children }) => (
       <React.Fragment>
         <button type="button" onClick={onClick}>
           {label}
+          {downArrow ? <div className="fur-down-arrow" /> : ''}
         </button>
         {children}
       </React.Fragment>
@@ -28,6 +27,7 @@ NavigationItem.defaultProps = {
   divider: false,
   onClick: null,
   children: null,
+  downArrow: false,
 };
 
 NavigationItem.propTypes = {
@@ -36,6 +36,7 @@ NavigationItem.propTypes = {
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   children: PropTypes.node,
+  downArrow: PropTypes.bool,
 };
 
 export default NavigationItem;

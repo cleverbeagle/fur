@@ -1,0 +1,39 @@
+.fur-form-textarea {
+  border: 1px solid var(--black-light);
+  padding: 15px 15px;
+  border-radius: 3px;
+  display: block;
+  width: 100%;
+  min-height: 100px;
+  height: 48px;
+  font-size: 14px;
+  line-height: 20px;
+  box-shadow: 0px 0px 1px 2px rgba(103, 109, 132, 0.02);
+  color: var(--black-dark);
+}
+
+.fur-form-textarea:focus,
+.fur-form-textarea:focus,
+.fur-form-textarea:focus,
+.fur-form-textarea:focus {
+  outline: 0;
+  border: 1px solid var(--primary);
+  box-shadow: 0px 0px 1px 1px rgba(66, 133, 244, 0.3);
+  color: var(--black-dark);
+}
+
+.fur-form-textarea::-webkit-input-placeholder {
+  color: #a6aab8;
+}
+
+.fur-form-textarea::-moz-placeholder {
+  color: #a6aab8;
+}
+
+.fur-form-textarea:-ms-input-placeholder {
+  color: #a6aab8;
+}
+
+.fur-form-textarea:-moz-placeholder {
+  color: #a6aab8;
+}
