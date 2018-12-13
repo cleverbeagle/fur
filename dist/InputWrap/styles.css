@@ -1,0 +1,55 @@
+.fur-form-input-wrap {
+  display: table;
+  width: 100%;
+  border-radius: 3px;
+  padding: 20px;
+}
+
+.fur-form-input-wrap .fur-form-input-cap,
+.fur-form-input-wrap .fur-form-input {
+  display: table-cell;
+}
+
+.fur-form-input-wrap .fur-form-input-cap {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.fur-form-input-wrap .fur-form-input {
+  position: relative;
+  z-index: 1;
+}
+
+/* .fur-form-input-wrap .fur-form-input:focus {
+  box-shadow: 0px 0px 1px 1px var(--black-light);
+} */
+
+.fur-form-input-wrap > .fur-form-input-cap:first-child {
+  background: #fff;
+  border: 1px solid var(--black-light);
+  border-radius: 3px 0 0 3px;
+  position: relative;
+  right: -1px;
+  z-index: 0;
+}
+
+.fur-form-input-wrap .fur-form-input + .fur-form-input-cap {
+  background: #fff;
+  border: 1px solid var(--black-light);
+  border-radius: 0 3px 3px 0;
+  position: relative;
+  left: -1px;
+  z-index: 0;
+}
+
+.fur-form-input-wrap .fur-form-input-cap + .fur-form-input {
+  border-radius: 0px 3px 3px 0;
+}
+
+.fur-form-input-wrap > .fur-form-input:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+.fur-form-input-wrap .fur-form-input:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}

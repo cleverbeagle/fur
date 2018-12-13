@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const NavigationItem = ({ active, divider, label, onClick, children, downArrow }) => (
+const NavigationItem = ({ className, active, divider, label, onClick, children, downArrow }) => (
   <li
     className={classNames(
       'fur-navigation-item',
       { 'fur-navigation-item-divider': divider },
       { 'fur-navigation-item-active': active },
+      className,
     )}
   >
     {!divider && (
@@ -28,6 +29,7 @@ NavigationItem.defaultProps = {
   onClick: null,
   children: null,
   downArrow: false,
+  className: false,
 };
 
 NavigationItem.propTypes = {
@@ -37,6 +39,7 @@ NavigationItem.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.node,
   downArrow: PropTypes.bool,
+  className: PropTypes.bool,
 };
 
 export default NavigationItem;

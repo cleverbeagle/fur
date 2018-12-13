@@ -5,12 +5,17 @@ class Label extends React.Component {
   state = {};
 
   render() {
-    return <label className="fur-form-label" {...this.props} />;
+    const { className, ...rest } = this.props;
+    return <label {...rest} className={`fur-form-label ${className}`} />;
   }
 }
 
+Label.defaultProps = {
+  className: '',
+};
+
 Label.propTypes = {
-  // prop: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 export default Label;

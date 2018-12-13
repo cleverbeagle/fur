@@ -2,14 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
 
-const Button = ({ className, children, onClick, onMouseOver, onMouseOut, theme, block }) => (
+const Button = ({ type, theme, block, className, children, ...rest }) => (
   <button
-    onClick={onClick}
-    onMouseOver={onMouseOver}
-    onFocus={onMouseOver}
-    onMouseOut={onMouseOut}
-    onBlur={onMouseOut}
-    type="button"
+    {...rest}
+    type={type || 'button'}
     className={classNames(
       'fur-button',
       `fur-button-${theme || 'default'}`,

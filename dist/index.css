@@ -1,10 +1,14 @@
 @import './global.css';
+@import './Alert/styles.css';
 @import './Brand/styles.css';
 @import './Button/styles.css';
 @import './Field/styles.css';
 @import './Grid/styles.css';
 @import './Input/styles.css';
+@import './InputCap/styles.css';
+@import './InputWrap/styles.css';
 @import './Label/styles.css';
+@import './Modal/styles.css';
 @import './Navigation/styles.css';
 @import './NavigationItem/styles.css';
 @import './NavigationItems/styles.css';

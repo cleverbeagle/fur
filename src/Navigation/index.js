@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import NavigationItems from '../NavigationItems';
 import NavigationItem from '../NavigationItem';
 import UserNavigationItem from '../UserNavigationItem';
@@ -14,11 +15,17 @@ class Navigation extends React.Component {
   };
 
   render() {
-    const { children, orientation } = this.props;
+    const { children, orientation, fluid } = this.props;
     const { open } = this.state;
 
     return (
-      <div className={`fur-navigation-${orientation} ${open ? 'fur-navigation-open' : ''}`}>
+      <div
+        className={classNames({
+          [`fur-navigation-${orientation}`]: !!orientation,
+          'fur-navigation-open': open,
+          'fur-navigation-fluid': fluid,
+        })}
+      >
         {React.Children.map(children, (child) =>
           React.cloneElement(child, { toggleNavigation: this.toggleNavigation }),
         )}
@@ -30,6 +37,7 @@ class Navigation extends React.Component {
 Navigation.propTypes = {
   children: PropTypes.node.isRequired,
   orientation: PropTypes.oneOf(['horizontal', 'vertical']).isRequired,
+  fluid: PropTypes.bool.isRequired,
 };
 
 Navigation.Items = NavigationItems;

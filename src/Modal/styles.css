@@ -1,0 +1,94 @@
+.fur-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1001;
+  overflow: scroll;
+  padding: 40px 0;
+}
+
+.fur-modal-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--black-light);
+
+}
+
+.fur-modal-header h2 {
+  float: left;
+  font-size: 18px;
+  color: var(--black);
+  font-weight: 400;
+  margin: 0;
+}
+
+.fur-modal-header .fur-modal-close {
+  float: right;
+  height: 16px;
+  position: relative;
+  top: 3px;
+}
+
+.fur-modal-header .fur-modal-close svg path {
+  fill: var(--danger);
+}
+
+.fur-modal-header .fur-modal-close:hover {
+  cursor: pointer;
+}
+
+.fur-modal-header .fur-modal-close:hover svg path {
+  fill: var(--danger);
+}
+
+.fur-modal.fur-modal-size-large .fur-modal-content {
+  max-width: 925px;
+}
+
+.fur-modal-content {
+  position: relative;
+  z-index: 1000;
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.04);
+}
+
+.fur-modal-open {
+  display: block;
+}
+
+.fur-modal-mask {
+  position: fixed;
+  background: rgba(135, 151, 178, 0.75);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 100%;
+}
+
+.fur-modal-body {
+  padding: 20px;
+}
+
+.fur-modal-footer {
+  padding: 15px;
+  border-top: 1px solid var(--black-light);
+}
+
+.fur-modal-footer .fur-button {
+  float: right;
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .fur-modal {
+    padding: 50px;
+  }
+}

@@ -30,7 +30,7 @@ const Col = ({
   ...rest
 }) => (
   <div
-    className={classNames({
+    className={classNames('fur-grid-col', {
       [`fur-grid-col-auto`]: !!auto,
       [`fur-grid-col-${col}`]: !!col,
       [`fur-grid-col-sm-${sm}`]: !!sm,

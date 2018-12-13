@@ -2,8 +2,13 @@
   background: #fff;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.06);
   height: 60px;
+  min-height: 60px;
   padding: 11px 0;
   margin-bottom: 20px;
+}
+
+.fur-navigation-horizontal.fur-navigation-fluid {
+  padding: 11px 15px;
 }
 
 .fur-navigation-horizontal > .fur-brand,
@@ -19,7 +24,7 @@
 .fur-navigation-horizontal > .fur-navigation-items,
 .fur-navigation-horizontal > .fur-grid-container > .fur-navigation-items {
   position: fixed;
-  z-index: 9999;
+  z-index: 1;
   top: 61px;
   bottom: 0;
   right: 0;
@@ -79,7 +84,6 @@
 
   .fur-navigation-horizontal > .fur-navigation-items,
   .fur-navigation-horizontal > .fur-grid-container > .fur-navigation-items {
-    flex: 2;
     width: auto;
     position: static;
     box-shadow: none;
@@ -87,6 +91,11 @@
     opacity: 1;
     padding: 0;
     margin-top: -1px;
+  }
+
+  .fur-navigation-horizontal > .fur-navigation-items:not(.pull-right):not(.pull-left),
+  .fur-navigation-horizontal > .fur-grid-container > .fur-navigation-items:not(.pull-right):not(.pull-left) {
+    flex: 2;
   }
 
   .fur-navigation-horizontal > .fur-navigation-items > .fur-navigation-item,
@@ -100,7 +109,7 @@
   .fur-navigation-horizontal > .fur-grid-container > .fur-navigation-items > .fur-navigation-item > .fur-navigation-items {
     display: none;
     position: absolute;
-    z-index: 9999;
+    z-index: 1;
     background: #fff;
     margin: 5px 0 0;
     padding: 10px;

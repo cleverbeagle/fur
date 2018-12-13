@@ -1,211 +1,108 @@
-Object.defineProperty(exports, '__esModule', {
-  value: true,
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
 });
 exports.default = void 0;
 
-const _react = _interopRequireDefault(require('react'));
+var _react = _interopRequireDefault(require("react"));
 
-const _propTypes = _interopRequireDefault(require('prop-types'));
+var _propTypes = _interopRequireDefault(require("prop-types"));
 
-const _classnames = _interopRequireDefault(require('classnames'));
+var _classnames = _interopRequireDefault(require("classnames"));
 
-const _Button = _interopRequireDefault(require('../Button'));
+var _Button = _interopRequireDefault(require("../Button"));
 
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _typeof(obj) {
-  if (typeof Symbol === 'function' && typeof Symbol.iterator === 'symbol') {
-    _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    _typeof = function _typeof(obj) {
-      return obj &&
-        typeof Symbol === 'function' &&
-        obj.constructor === Symbol &&
-        obj !== Symbol.prototype
-        ? 'symbol'
-        : typeof obj;
-    };
-  }
-  return _typeof(obj);
-}
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError('Cannot call a class as a function');
-  }
-}
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function _defineProperties(target, props) {
-  for (let i = 0; i < props.length; i++) {
-    const descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ('value' in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === 'object' || typeof call === 'function')) {
-    return call;
-  }
-  return _assertThisInitialized(self);
-}
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _getPrototypeOf(o) {
-  _getPrototypeOf = Object.setPrototypeOf
-    ? Object.getPrototypeOf
-    : function _getPrototypeOf(o) {
-        return o.__proto__ || Object.getPrototypeOf(o);
-      };
-  return _getPrototypeOf(o);
-}
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== 'function' && superClass !== null) {
-    throw new TypeError('Super expression must either be null or a function');
-  }
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: { value: subClass, writable: true, configurable: true },
-  });
-  if (superClass) _setPrototypeOf(subClass, superClass);
-}
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf =
-    Object.setPrototypeOf ||
-    function _setPrototypeOf(o, p) {
-      o.__proto__ = p;
-      return o;
-    };
-  return _setPrototypeOf(o, p);
-}
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-  return self;
-}
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value,
-      enumerable: true,
-      configurable: true,
-      writable: true,
-    });
-  } else {
-    obj[key] = value;
-  }
-  return obj;
-}
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-const UserNavigationItem =
-  /* #__PURE__ */
-  (function(_React$Component) {
-    _inherits(UserNavigationItem, _React$Component);
+var UserNavigationItem =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(UserNavigationItem, _React$Component);
 
-    function UserNavigationItem() {
-      let _getPrototypeOf2;
+  function UserNavigationItem() {
+    var _getPrototypeOf2;
 
-      let _this;
+    var _this;
 
-      _classCallCheck(this, UserNavigationItem);
+    _classCallCheck(this, UserNavigationItem);
 
-      for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-        args[_key] = arguments[_key];
-      }
-
-      _this = _possibleConstructorReturn(
-        this,
-        (_getPrototypeOf2 = _getPrototypeOf(UserNavigationItem)).call.apply(
-          _getPrototypeOf2,
-          [this].concat(args),
-        ),
-      );
-
-      _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), 'state', {
-        open: false,
-      });
-
-      _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), 'toggleMenu', () => {
-        _this.setState((state) => ({
-          open: !state.open,
-        }));
-      });
-
-      return _this;
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
     }
 
-    _createClass(UserNavigationItem, [
-      {
-        key: 'render',
-        value: function render() {
-          const _this$props = this.props;
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(UserNavigationItem)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-          const avatar = _this$props.avatar;
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {
+      open: false
+    });
 
-          const name = _this$props.name;
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "toggleMenu", function () {
+      _this.setState(function (state) {
+        return {
+          open: !state.open
+        };
+      });
+    });
 
-          const children = _this$props.children;
-          const open = this.state.open;
-          return _react.default.createElement(
-            'li',
-            {
-              className: (0, _classnames.default)(
-                'fur-navigation-item',
-                'fur-user-navigation-item',
-                {
-                  'fur-user-navigation-item-open': open,
-                },
-                {
-                  'fur-user-navigation-item-with-avatar': !!avatar,
-                },
-              ),
-            },
-            _react.default.createElement(
-              _Button.default,
-              {
-                onClick: this.toggleMenu,
-              },
-              avatar &&
-                _react.default.createElement('img', {
-                  src: avatar,
-                  alt: name,
-                }),
-              _react.default.createElement('span', null, name),
-              _react.default.createElement('div', {
-                className: 'fur-down-arrow',
-              }),
-            ),
-            children,
-          );
-        },
-      },
-    ]);
+    return _this;
+  }
 
-    return UserNavigationItem;
-  })(_react.default.Component);
+  _createClass(UserNavigationItem, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          avatar = _this$props.avatar,
+          name = _this$props.name,
+          children = _this$props.children;
+      var open = this.state.open;
+      return _react.default.createElement("li", {
+        className: (0, _classnames.default)('fur-navigation-item', 'fur-user-navigation-item', {
+          'fur-user-navigation-item-open': open
+        }, {
+          'fur-user-navigation-item-with-avatar': !!avatar
+        })
+      }, _react.default.createElement(_Button.default, {
+        onClick: this.toggleMenu
+      }, avatar && _react.default.createElement("img", {
+        src: avatar,
+        alt: name
+      }), _react.default.createElement("span", null, name), _react.default.createElement("div", {
+        className: "fur-down-arrow"
+      })), children);
+    }
+  }]);
+
+  return UserNavigationItem;
+}(_react.default.Component);
 
 UserNavigationItem.defaultProps = {
-  avatar: null,
+  avatar: null
 };
 UserNavigationItem.propTypes = {
   avatar: _propTypes.default.string,
   name: _propTypes.default.string.isRequired,
-  children: _propTypes.default.node.isRequired,
+  children: _propTypes.default.node.isRequired
 };
-const _default = UserNavigationItem;
+var _default = UserNavigationItem;
 exports.default = _default;

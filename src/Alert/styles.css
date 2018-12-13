@@ -1,0 +1,61 @@
+.fur-alert {
+  background: none;
+  border: none;
+  color: var(--black);
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 21px;
+  padding: 15px 20px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.fur-alert-block {
+  width: 100%;
+  display: block;
+}
+
+.fur-alert:hover {
+  cursor: pointer;
+}
+
+.fur-alert:hover,
+.fur-buttona:active,
+.fur-alert:focus {
+  outline: 0;
+}
+
+.fur-alert:active {
+  position: relative;
+  opacity: 0.9;
+  top: 1px;
+}
+
+.fur-alert-default {
+  background: #fff;
+  border: 1px solid #E2E5ED;
+}
+
+.fur-alert-primary {
+  background: var(--primary);
+  color: #fff;
+}
+
+.fur-alert-success {
+  background: var(--success);
+  color: #fff;
+}
+
+.fur-alert-success:hover {
+  background: #00b379;
+}
+
+.fur-alert-warning {
+  background: var(--warning);
+  color: #fff;
+}
+
+.fur-alert-danger {
+  background: var(--danger);
+  color: #fff;
+}
