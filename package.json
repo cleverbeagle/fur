@@ -4,7 +4,7 @@
   "description": "The ultimate UI kit for products.",
   "main": "dist/index.min.js",
   "scripts": {
-    "build": "babel src -d ./dist --ignore src/index.test.js,src/**/*.stories.js && uglifyjs dist/index.js -o dist/index.min.js --compress --mangle && cpx 'src/**/*.css' dist && cpx 'src/fonts/*.woff' dist/fonts && cat src/global.css src/**/*.css > dist/fur.css",
+    "build": "babel src -d ./dist --ignore src/index.test.js,src/**/*.stories.js && uglifyjs dist/index.js -o dist/index.min.js --compress --mangle && cpx 'src/**/*.css' dist && cpx 'src/fonts/*.woff' dist/fonts && cat src/reset.css src/**/*.css > dist/fur.css",
     "dev": "babel src -d ./dist --watch --ignore src/index.test.js",
     "test": "jest --watch --verbose false",
     "storybook": "start-storybook -p 9009 -s public",

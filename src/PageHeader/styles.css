@@ -1,0 +1,16 @@
+.fur-page-header {
+  display: flex;
+  align-items: center;
+  margin: 20px 0 40px;
+  min-height: 42px;
+}
+
+.fur-page-header > .fur-page-header-action {
+  margin-left: auto;
+}
+
+@media screen and (min-width: 992px) {
+  .fur-page-header {
+    margin: 10px 0 40px;
+  }
+}

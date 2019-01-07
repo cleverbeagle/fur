@@ -1,6 +1,8 @@
 .fur-form-input-cap {
   background: #fff;
   border: 1px solid var(--black-light);
-  padding: 11px 16px;
+  padding: 9px 16px;
+  font-size: 14px;
+  height: 42px;
   box-shadow: 0px 0px 1px 1px rgba(103, 109, 132, 0.02);
 }

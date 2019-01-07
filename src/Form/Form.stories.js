@@ -21,4 +21,10 @@ storiesOf('Form.Input', module)
       <Form.Input type="text" />
       <Form.InputCap>Test</Form.InputCap>
     </Form.InputWrap>
+  ))
+  .add('Input w/ Legend', () => (
+    <Form.Field>
+      <Form.Legend>This is a legend</Form.Legend>
+      <Form.Input type="text" />
+    </Form.Field>
   ));

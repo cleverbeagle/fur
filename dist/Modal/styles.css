@@ -26,9 +26,31 @@
 
 .fur-modal-header .fur-modal-close {
   float: right;
-  height: 16px;
+  background: none;
+  border: none;
+  margin: 0;
+  height: auto;
+  padding: 0;
+  font-size: 38px;
+  line-height: 12px;
+  text-shadow: 0 1px 0 #fff;
+  color: var(--black-medium);
+}
+
+.fur-modal-header .fur-modal-close:hover,
+.fur-modal-header .fur-modal-close:focus {
+  color: var(--black);
+}
+
+.fur-modal-header .fur-modal-close:active {
+  color: var(--black);
   position: relative;
-  top: 3px;
+  top: 1px;
+}
+
+.fur-modal-header .fur-modal-close:active,
+.fur-modal-header .fur-modal-close:focus {
+  outline: 0;
 }
 
 .fur-modal-header .fur-modal-close svg path {
@@ -78,7 +100,7 @@
 }
 
 .fur-modal-footer {
-  padding: 15px;
+  padding: 20px;
   border-top: 1px solid var(--black-light);
 }
 

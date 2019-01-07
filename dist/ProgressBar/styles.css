@@ -1,0 +1,34 @@
+.fur-progress-bar {
+  width: 100%;
+  height: 10px;
+  background: var(--black-light);
+  border-radius: 10px;
+  position: relative;
+}
+
+.fur-progress-bar-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+  height: 10px;
+  background: var(--success);
+  transition: width .5s ease-in-out;
+}
+
+.fur-progress-bar-primary .fur-progress-bar-progress {
+  background: var(--primary);
+}
+
+.fur-progress-bar-success .fur-progress-bar-progress {
+  background: var(--success);
+}
+
+.fur-progress-bar-warning .fur-progress-bar-progress {
+  background: var(--warning);
+}
+
+.fur-progress-bar-danger .fur-progress-bar-progress {
+  background: var(--danger);
+}

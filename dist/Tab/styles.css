@@ -1,0 +1,30 @@
+.fur-tabs-tab {
+  padding: 0 0 10px;
+  position: relative;
+}
+
+.fur-tabs-tab:hover {
+  cursor: pointer;
+}
+
+.fur-tabs-tab-title {
+  color: var(--black-medium);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.fur-tabs-tab-active > .fur-tabs-tab-title {
+  color: var(--primary);
+}
+
+.fur-tabs-tab-active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary);
+}

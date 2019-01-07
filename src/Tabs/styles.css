@@ -1,0 +1,25 @@
+.fur-tabs > ul {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.fur-tabs > ul:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--black-light);
+}
+
+.fur-tabs > ul > li {
+  float: left;
+}
+
+.fur-tabs > ul > li:not(:last-child) {
+  margin-right: 23px;
+}
+
+.fur-tabs-content {
+  margin-top: 20px;
+}

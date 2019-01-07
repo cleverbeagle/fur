@@ -23,6 +23,8 @@ var _Select = _interopRequireDefault(require("../Select"));
 
 var _Textarea = _interopRequireDefault(require("../Textarea"));
 
+var _Legend = _interopRequireDefault(require("../Legend"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -96,5 +98,6 @@ Form.InputWrap = _InputWrap.default;
 Form.InputCap = _InputCap.default;
 Form.Select = _Select.default;
 Form.Textarea = _Textarea.default;
+Form.Legend = _Legend.default;
 var _default = Form;
 exports.default = _default;

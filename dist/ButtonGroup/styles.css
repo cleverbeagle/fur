@@ -1,0 +1,23 @@
+.fur-button-group > .fur-button:not(:first-child):not(:last-child) {
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+
+.fur-button-group > .fur-button:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+.fur-button-group > .fur-button:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+.fur-button-group .fur-button:not(.fur-button-default) + .fur-button-default {
+  border-left: none;
+}
+
+.fur-button-group .fur-button-default + .fur-button:not(.fur-button-default) {
+  position: relative;
+  z-index: 2;
+  margin-left: -1px;
+}

@@ -1,0 +1,8 @@
+.fur-list-group {
+  border: 1px solid var(--black-light);
+  border-radius: 3px;
+}
+
+.fur-list-group > .fur-list-group-item:not(:last-child) {
+  border-bottom: 1px solid var(--black-light);
+}

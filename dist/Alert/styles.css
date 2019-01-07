@@ -10,6 +10,10 @@
   margin-bottom: 20px;
 }
 
+.fur-alert > *:last-child {
+  margin-bottom: 0;
+}
+
 .fur-alert-block {
   width: 100%;
   display: block;

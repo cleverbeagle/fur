@@ -7,8 +7,8 @@
   line-height: 13px;
   font-weight: 400;
   letter-spacing: 0.03em;
-  height: 48px;
-  padding: 10px 30px;
+  height: 42px;
+  padding: 10px 20px;
   border-radius: 3px;
   text-transform: uppercase;
 }
@@ -36,7 +36,7 @@
 
 .fur-button-default {
   background: #fff;
-  border: 1px solid #E2E5ED;
+  border: 1px solid var(--black-light);
 }
 
 .fur-button-primary {

@@ -32,9 +32,9 @@
   width: 275px;
   padding: 10px;
   box-shadow: -1px 0 0 0 rgba(0, 0, 0, 0.06);
-  transform: translateX(260px);
-  opacity: 0;
-  transition: transform .4s ease-in-out, opacity .4s ease-in-out;
+  transform: translateX(275px);
+  opacity: 1;
+  transition: transform .4s ease-in-out;
 }
 
 .fur-navigation-horizontal.fur-navigation-open > .fur-navigation-items,
@@ -91,6 +91,7 @@
     opacity: 1;
     padding: 0;
     margin-top: -1px;
+    transition: none;
   }
 
   .fur-navigation-horizontal > .fur-navigation-items:not(.pull-right):not(.pull-left),

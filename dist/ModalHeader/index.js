@@ -21,7 +21,7 @@ var ModalHeader = function ModalHeader(_ref) {
     type: "button",
     className: "fur-modal-close",
     onClick: onClose
-  }, "X")));
+  }, "\xD7")));
 };
 
 ModalHeader.defaultProps = {

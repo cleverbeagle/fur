@@ -7,6 +7,7 @@ import InputWrap from '../InputWrap';
 import InputCap from '../InputCap';
 import Select from '../Select';
 import Textarea from '../Textarea';
+import Legend from '../Legend';
 
 class Form extends React.Component {
   state = {};
@@ -28,5 +29,6 @@ Form.InputWrap = InputWrap;
 Form.InputCap = InputCap;
 Form.Select = Select;
 Form.Textarea = Textarea;
+Form.Legend = Legend;
 
 export default Form;

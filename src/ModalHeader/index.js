@@ -7,7 +7,7 @@ const ModalHeader = ({ children, closeButton, onClose }) => (
       {children}
       {closeButton && (
         <button type="button" className="fur-modal-close" onClick={onClose}>
-          X
+          &times;
         </button>
       )}
     </header>
