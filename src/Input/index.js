@@ -5,12 +5,19 @@ class Input extends React.Component {
   state = {};
 
   render() {
-    return <input className="fur-form-input" {...this.props} />;
+    const { inputRef, ...rest } = this.props;
+    return <input className="fur-form-input" ref={inputRef} {...rest} />;
   }
 }
 
+Input.defaultProps = {
+  inputRef: null,
+  type: 'text',
+};
+
 Input.propTypes = {
-  // prop: PropTypes.string.isRequired,
+  inputRef: PropTypes.func,
+  type: PropTypes.string,
 };
 
 export default Input;

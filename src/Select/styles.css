@@ -10,13 +10,13 @@
   display: block;
   width: 0; 
   height: 0; 
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  border-top: 7px solid var(--black-medium);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid var(--black-medium);
 }
 
 .fur-form-select select {
-  color: var(--black-dark);
+  color: var(--black);
   border: 1px solid var(--black-light);
   border-radius: 3px;
   display: block;

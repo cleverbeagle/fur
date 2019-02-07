@@ -6,6 +6,7 @@
   font-size: 13px;
   line-height: 13px;
   font-weight: 400;
+  white-space: nowrap;
   letter-spacing: 0.03em;
   height: 42px;
   padding: 10px 20px;

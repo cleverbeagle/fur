@@ -7,6 +7,8 @@ import InputWrap from '../InputWrap';
 import InputCap from '../InputCap';
 import Select from '../Select';
 import Textarea from '../Textarea';
+import Checkbox from '../Checkbox';
+import DateTimePicker from '../DateTimePicker';
 import Legend from '../Legend';
 
 class Form extends React.Component {
@@ -29,6 +31,8 @@ Form.InputWrap = InputWrap;
 Form.InputCap = InputCap;
 Form.Select = Select;
 Form.Textarea = Textarea;
+Form.Checkbox = Checkbox;
+Form.DateTimePicker = DateTimePicker;
 Form.Legend = Legend;
 
 export default Form;

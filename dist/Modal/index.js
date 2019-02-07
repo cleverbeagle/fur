@@ -59,24 +59,28 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Modal)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "componentWillUpdate", function (nextProps) {
-      if (nextProps.open) document.body.style.overflow = 'hidden';
-    });
-
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleClose", function (event) {
       var onClose = _this.props.onClose;
       event.preventDefault();
-
-      if (onClose) {
-        onClose(event);
-        document.body.style.overflow = 'auto';
-      }
+      document.body.style.overflow = 'auto';
+      if (onClose) onClose(event);
     });
 
     return _this;
   }
 
   _createClass(Modal, [{
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {
+      var open = this.props.open;
+
+      if (open) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       var _classNames;

@@ -7,17 +7,21 @@ import ModalBody from '../ModalBody';
 import ModalFooter from '../ModalFooter';
 
 class Modal extends React.Component {
-  componentWillUpdate = (nextProps) => {
-    if (nextProps.open) document.body.style.overflow = 'hidden';
-  };
+  componentDidUpdate() {
+    const { open } = this.props;
+
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }
 
   handleClose = (event) => {
     const { onClose } = this.props;
     event.preventDefault();
-    if (onClose) {
-      onClose(event);
-      document.body.style.overflow = 'auto';
-    }
+    document.body.style.overflow = 'auto';
+    if (onClose) onClose(event);
   };
 
   render() {

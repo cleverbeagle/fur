@@ -14,27 +14,6 @@
   margin-bottom: 0;
 }
 
-.fur-alert-block {
-  width: 100%;
-  display: block;
-}
-
-.fur-alert:hover {
-  cursor: pointer;
-}
-
-.fur-alert:hover,
-.fur-buttona:active,
-.fur-alert:focus {
-  outline: 0;
-}
-
-.fur-alert:active {
-  position: relative;
-  opacity: 0.9;
-  top: 1px;
-}
-
 .fur-alert-default {
   background: #fff;
   border: 1px solid #E2E5ED;
@@ -48,10 +27,6 @@
 .fur-alert-success {
   background: var(--success);
   color: #fff;
-}
-
-.fur-alert-success:hover {
-  background: #00b379;
 }
 
 .fur-alert-warning {

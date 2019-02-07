@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-const NavigationItem = ({ className, active, divider, label, onClick, children, downArrow }) => (
+const NavigationItem = ({ className, theme, active, divider, label, onClick, children, downArrow }) => (
   <li
     className={classNames(
       'fur-navigation-item',
@@ -13,7 +13,11 @@ const NavigationItem = ({ className, active, divider, label, onClick, children, 
   >
     {!divider && (
       <React.Fragment>
-        <button type="button" onClick={onClick}>
+        <button
+          type="button"
+          onClick={onClick}
+          className={classNames({ [`theme-${theme}`]: theme })}
+        >
           {label}
           {downArrow ? <div className="fur-down-arrow" /> : ''}
         </button>

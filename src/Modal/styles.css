@@ -65,6 +65,10 @@
   fill: var(--danger);
 }
 
+.fur-modal.fur-modal-size-medium .fur-modal-content {
+  max-width: 768px;
+}
+
 .fur-modal.fur-modal-size-large .fur-modal-content {
   max-width: 925px;
 }

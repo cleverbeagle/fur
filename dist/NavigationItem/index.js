@@ -13,8 +13,11 @@ var _classnames = _interopRequireDefault(require("classnames"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var NavigationItem = function NavigationItem(_ref) {
   var className = _ref.className,
+      theme = _ref.theme,
       active = _ref.active,
       divider = _ref.divider,
       label = _ref.label,
@@ -29,7 +32,8 @@ var NavigationItem = function NavigationItem(_ref) {
     }, className)
   }, !divider && _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("button", {
     type: "button",
-    onClick: onClick
+    onClick: onClick,
+    className: (0, _classnames.default)(_defineProperty({}, "theme-".concat(theme), theme))
   }, label, downArrow ? _react.default.createElement("div", {
     className: "fur-down-arrow"
   }) : ''), children));

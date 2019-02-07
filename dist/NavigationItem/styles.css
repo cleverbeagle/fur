@@ -37,6 +37,36 @@
   cursor: pointer;
 }
 
+.fur-navigation-item > button:hover,
+.fur-navigation-item-active > button,
+.fur-navigation-item > button.theme-primary:hover,
+.fur-navigation-item-active > button.theme-primary {
+  color: var(--primary);
+  background: rgba(66, 133, 244, 0.1);
+  cursor: pointer;
+}
+
+.fur-navigation-item > button.theme-success:hover,
+.fur-navigation-item-active > button.theme-success {
+  color: var(--success);
+  background: rgba(0, 212, 144, 0.1);
+  cursor: pointer;
+}
+
+.fur-navigation-item > button.theme-warning:hover,
+.fur-navigation-item-active > button.theme-warning {
+  color: var(--warning);
+  background: rgba(255, 207, 80, 0.1);
+  cursor: pointer;
+}
+
+.fur-navigation-item > button.theme-danger:hover,
+.fur-navigation-item-active > button.theme-danger {
+  color: var(--danger);
+  background: rgba(234, 67, 53, 0.1);
+  cursor: pointer;
+}
+
 .fur-navigation-item > button > i {
   display: inline-block;
   margin-left: 6px;

@@ -5,7 +5,8 @@ class Textarea extends React.Component {
   state = {};
 
   render() {
-    return <textarea className="fur-form-textarea" {...this.props} />;
+    const { inputRef, ...rest } = this.props;
+    return <textarea className="fur-form-textarea" ref={inputRef} {...rest} />;
   }
 }
 

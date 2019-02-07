@@ -27,4 +27,14 @@ storiesOf('Form.Input', module)
       <Form.Legend>This is a legend</Form.Legend>
       <Form.Input type="text" />
     </Form.Field>
+  ))
+  .add('Checkbox', () => (
+    <Form.Field>
+      <Form.Checkbox />
+    </Form.Field>
+  ))
+  .add('DateTimePicker', () => (
+    <Form.Field>
+      <Form.DateTimePicker />
+    </Form.Field>
   ));

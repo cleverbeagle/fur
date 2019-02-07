@@ -9,6 +9,10 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _flatpickr = _interopRequireDefault(require("flatpickr"));
+
+var _Input = _interopRequireDefault(require("../Input"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -27,63 +31,57 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-var Input =
+var DateTimePicker =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(Input, _React$Component);
+  _inherits(DateTimePicker, _React$Component);
 
-  function Input() {
-    var _getPrototypeOf2;
+  function DateTimePicker() {
+    _classCallCheck(this, DateTimePicker);
 
-    var _this;
-
-    _classCallCheck(this, Input);
-
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Input)).call.apply(_getPrototypeOf2, [this].concat(args)));
-
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {});
-
-    return _this;
+    return _possibleConstructorReturn(this, _getPrototypeOf(DateTimePicker).apply(this, arguments));
   }
 
-  _createClass(Input, [{
+  _createClass(DateTimePicker, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var options = this.props.options;
+      this.flatpickr = (0, _flatpickr.default)(this.dateTimePicker, options);
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this$props = this.props,
-          inputRef = _this$props.inputRef,
-          rest = _objectWithoutProperties(_this$props, ["inputRef"]);
+      var _this = this;
 
-      return _react.default.createElement("input", _extends({
-        className: "fur-form-input",
-        ref: inputRef
-      }, rest));
+      var _this$props = this.props,
+          options = _this$props.options,
+          rest = _objectWithoutProperties(_this$props, ["options"]);
+
+      return _react.default.createElement(_Input.default, _extends({}, rest, {
+        inputRef: function inputRef(dateTimePicker) {
+          return _this.dateTimePicker = dateTimePicker;
+        }
+      })); // eslint-disable-line
     }
   }]);
 
-  return Input;
+  return DateTimePicker;
 }(_react.default.Component);
 
-Input.defaultProps = {
-  inputRef: null,
-  type: 'text'
+DateTimePicker.defaultProps = {
+  options: {}
 };
-Input.propTypes = {
-  inputRef: _propTypes.default.func,
-  type: _propTypes.default.string
+DateTimePicker.propTypes = {
+  options: _propTypes.default.object // eslint-disable-line
+
 };
-var _default = Input;
+var _default = DateTimePicker;
 exports.default = _default;
