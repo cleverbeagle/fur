@@ -18,20 +18,16 @@ const Button = ({ type, theme, block, className, children, ...rest }) => (
 );
 
 Button.defaultProps = {
-  onClick: null,
-  onMouseOver: null,
-  onMouseOut: null,
+  className: null,
+  theme: 'default',
   block: false,
 };
 
 Button.propTypes = {
-  className: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-  onClick: PropTypes.func,
-  onMouseOver: PropTypes.func,
-  onMouseOut: PropTypes.func,
-  theme: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  theme: PropTypes.string,
   block: PropTypes.bool,
+  children: PropTypes.node.isRequired,
 };
 
 export default Button;

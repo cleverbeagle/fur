@@ -36,19 +36,15 @@ var Button = function Button(_ref) {
 };
 
 Button.defaultProps = {
-  onClick: null,
-  onMouseOver: null,
-  onMouseOut: null,
+  className: null,
+  theme: 'default',
   block: false
 };
 Button.propTypes = {
-  className: _propTypes.default.string.isRequired,
-  children: _propTypes.default.node.isRequired,
-  onClick: _propTypes.default.func,
-  onMouseOver: _propTypes.default.func,
-  onMouseOut: _propTypes.default.func,
-  theme: _propTypes.default.string.isRequired,
-  block: _propTypes.default.bool
+  className: _propTypes.default.string,
+  theme: _propTypes.default.string,
+  block: _propTypes.default.bool,
+  children: _propTypes.default.node.isRequired
 };
 var _default = Button;
 exports.default = _default;

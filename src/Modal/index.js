@@ -7,25 +7,27 @@ import ModalBody from '../ModalBody';
 import ModalFooter from '../ModalFooter';
 
 class Modal extends React.Component {
-  componentDidUpdate() {
-    const { open } = this.props;
+  componentWillReceiveProps(nextProps) {
+    const { open } = nextProps;
 
-    if (open) {
+    // NOTE: If modal is not currently open but will be, set overflow hidden
+    // on body to disable scroling.
+    if (!this.props.open && open) { // eslint-disable-line
       document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
     }
   }
 
   handleClose = (event) => {
     const { onClose } = this.props;
     event.preventDefault();
+
     document.body.style.overflow = 'auto';
+
     if (onClose) onClose(event);
   };
 
   render() {
-    const { open, size, className, children, hideByClickOnMask, maskOpacity } = this.props;
+    const { open, size, className, children, maskOpacity } = this.props;
     return (
       <div
         className={classNames(className, 'fur-modal', {
@@ -33,14 +35,15 @@ class Modal extends React.Component {
           'fur-modal-open': open,
         })}
       >
+        <div className="fur-modal-close-icon" />
         <div className="fur-modal-content">{children}</div>
         <div
           tabIndex={0}
           role="button"
           className="fur-modal-mask"
           style={{ background: `rgba(135, 151, 178, ${maskOpacity})` }}
-          onClick={hideByClickOnMask ? this.handleClose : () => {}}
-          onKeyUp={hideByClickOnMask ? this.handleClose : () => {}}
+          onClick={this.handleClose}
+          onKeyUp={this.handleClose}
         />
       </div>
     );
@@ -56,7 +59,6 @@ Modal.defaultProps = {
   open: false,
   size: '',
   className: '',
-  hideByClickOnMask: false,
   maskOpacity: 0.75,
 };
 
@@ -66,7 +68,6 @@ Modal.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   onClose: PropTypes.func.isRequired,
-  hideByClickOnMask: PropTypes.func,
   maskOpacity: PropTypes.number,
 };
 

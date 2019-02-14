@@ -2457,45 +2457,35 @@ span.flatpickr-day.selected {
   margin: 0;
 }
 
-.fur-modal-header .fur-modal-close {
-  float: right;
-  background: none;
-  border: none;
-  margin: 0;
-  height: auto;
-  padding: 0;
-  font-size: 38px;
-  line-height: 12px;
-  text-shadow: 0 1px 0 #fff;
-  color: var(--black-medium);
+.fur-modal-close-icon {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  width: 25px;
+  height: 25px;
+  z-index: 99999;
+  pointer-events: none;
 }
 
-.fur-modal-header .fur-modal-close:hover,
-.fur-modal-header .fur-modal-close:focus {
-  color: var(--black);
-}
-
-.fur-modal-header .fur-modal-close:active {
-  color: var(--black);
-  position: relative;
-  top: 1px;
-}
-
-.fur-modal-header .fur-modal-close:active,
-.fur-modal-header .fur-modal-close:focus {
-  outline: 0;
-}
-
-.fur-modal-header .fur-modal-close svg path {
-  fill: var(--danger);
-}
-
-.fur-modal-header .fur-modal-close:hover {
+.fur-modal-close-icon:hover {
   cursor: pointer;
 }
 
-.fur-modal-header .fur-modal-close:hover svg path {
-  fill: var(--danger);
+.fur-modal-close-icon:before, .fur-modal-close-icon:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 25px;
+  width: 2px;
+  background-color: #fff;
+}
+
+.fur-modal-close-icon:before {
+  transform: rotate(45deg);
+}
+
+.fur-modal-close-icon:after {
+  transform: rotate(-45deg);
 }
 
 .fur-modal.fur-modal-size-medium .fur-modal-content {
@@ -2594,6 +2584,7 @@ span.flatpickr-day.selected {
 .fur-navigation-horizontal.fur-navigation-open > .fur-grid-container > .fur-navigation-items {
   transform: translateX(0px);
   opacity: 1;
+  margin-bottom: 0;
 }
 
 .fur-navigation-horizontal > .fur-navigation-items > .fur-user-navigation-item,

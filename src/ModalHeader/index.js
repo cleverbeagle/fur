@@ -3,14 +3,7 @@ import PropTypes from 'prop-types';
 
 const ModalHeader = ({ children, closeButton, onClose }) => (
   <React.Fragment>
-    <header className="fur-modal-header clearfix">
-      {children}
-      {closeButton && (
-        <button type="button" className="fur-modal-close" onClick={onClose}>
-          &times;
-        </button>
-      )}
-    </header>
+    <header className="fur-modal-header clearfix">{children}</header>
   </React.Fragment>
 );
 

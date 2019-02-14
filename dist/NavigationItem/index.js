@@ -40,21 +40,25 @@ var NavigationItem = function NavigationItem(_ref) {
 };
 
 NavigationItem.defaultProps = {
+  theme: 'default',
   active: false,
   divider: false,
+  label: null,
   onClick: null,
   children: null,
   downArrow: false,
-  className: false
+  className: null
 };
 NavigationItem.propTypes = {
+  theme: _propTypes.default.string,
   active: _propTypes.default.bool,
   divider: _propTypes.default.bool,
-  label: _propTypes.default.string.isRequired,
+  label: _propTypes.default.node,
+  // NOTE: Not required because it could be a divider.
   onClick: _propTypes.default.func,
   children: _propTypes.default.node,
   downArrow: _propTypes.default.bool,
-  className: _propTypes.default.bool
+  className: _propTypes.default.string
 };
 var _default = NavigationItem;
 exports.default = _default;

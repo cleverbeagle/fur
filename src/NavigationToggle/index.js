@@ -10,8 +10,12 @@ const NavigationToggle = ({ toggleNavigation }) => (
   </Button>
 );
 
+NavigationToggle.defaultProps = {
+  toggleNavigation: () => {},
+};
+
 NavigationToggle.propTypes = {
-  toggleNavigation: PropTypes.func.isRequired,
+  toggleNavigation: PropTypes.func,
 };
 
 export default NavigationToggle;

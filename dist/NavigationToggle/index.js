@@ -21,8 +21,11 @@ var NavigationToggle = function NavigationToggle(_ref) {
   }, _react.default.createElement("span", null), _react.default.createElement("span", null), _react.default.createElement("span", null));
 };
 
+NavigationToggle.defaultProps = {
+  toggleNavigation: function toggleNavigation() {}
+};
 NavigationToggle.propTypes = {
-  toggleNavigation: _propTypes.default.func.isRequired
+  toggleNavigation: _propTypes.default.func
 };
 var _default = NavigationToggle;
 exports.default = _default;

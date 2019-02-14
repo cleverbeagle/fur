@@ -17,11 +17,7 @@ var ModalHeader = function ModalHeader(_ref) {
       onClose = _ref.onClose;
   return _react.default.createElement(_react.default.Fragment, null, _react.default.createElement("header", {
     className: "fur-modal-header clearfix"
-  }, children, closeButton && _react.default.createElement("button", {
-    type: "button",
-    className: "fur-modal-close",
-    onClick: onClose
-  }, "\xD7")));
+  }, children));
 };
 
 ModalHeader.defaultProps = {

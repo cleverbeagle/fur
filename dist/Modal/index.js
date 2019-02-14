@@ -70,14 +70,14 @@ function (_React$Component) {
   }
 
   _createClass(Modal, [{
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {
-      var open = this.props.open;
+    key: "componentWillReceiveProps",
+    value: function componentWillReceiveProps(nextProps) {
+      var open = nextProps.open; // NOTE: If modal is not currently open but will be, set overflow hidden
+      // on body to disable scroling.
 
-      if (open) {
+      if (!this.props.open && open) {
+        // eslint-disable-line
         document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = 'auto';
       }
     }
   }, {
@@ -90,11 +90,12 @@ function (_React$Component) {
           size = _this$props.size,
           className = _this$props.className,
           children = _this$props.children,
-          hideByClickOnMask = _this$props.hideByClickOnMask,
           maskOpacity = _this$props.maskOpacity;
       return _react.default.createElement("div", {
         className: (0, _classnames.default)(className, 'fur-modal', (_classNames = {}, _defineProperty(_classNames, "fur-modal-size-".concat(size), size), _defineProperty(_classNames, 'fur-modal-open', open), _classNames))
       }, _react.default.createElement("div", {
+        className: "fur-modal-close-icon"
+      }), _react.default.createElement("div", {
         className: "fur-modal-content"
       }, children), _react.default.createElement("div", {
         tabIndex: 0,
@@ -103,8 +104,8 @@ function (_React$Component) {
         style: {
           background: "rgba(135, 151, 178, ".concat(maskOpacity, ")")
         },
-        onClick: hideByClickOnMask ? this.handleClose : function () {},
-        onKeyUp: hideByClickOnMask ? this.handleClose : function () {}
+        onClick: this.handleClose,
+        onKeyUp: this.handleClose
       }));
     }
   }]);
@@ -120,7 +121,6 @@ Modal.defaultProps = {
   open: false,
   size: '',
   className: '',
-  hideByClickOnMask: false,
   maskOpacity: 0.75
 };
 Modal.propTypes = {
@@ -129,7 +129,6 @@ Modal.propTypes = {
   className: _propTypes.default.string,
   children: _propTypes.default.node.isRequired,
   onClose: _propTypes.default.func.isRequired,
-  hideByClickOnMask: _propTypes.default.func,
   maskOpacity: _propTypes.default.number
 };
 var _default = Modal;

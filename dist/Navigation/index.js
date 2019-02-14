@@ -98,10 +98,13 @@ function (_React$Component) {
   return Navigation;
 }(_react.default.Component);
 
+Navigation.defaultProps = {
+  fluid: false
+};
 Navigation.propTypes = {
   children: _propTypes.default.node.isRequired,
   orientation: _propTypes.default.oneOf(['horizontal', 'vertical']).isRequired,
-  fluid: _propTypes.default.bool.isRequired
+  fluid: _propTypes.default.bool
 };
 Navigation.Items = _NavigationItems.default;
 Navigation.Item = _NavigationItem.default;

@@ -34,10 +34,14 @@ class Navigation extends React.Component {
   }
 }
 
+Navigation.defaultProps = {
+  fluid: false,
+};
+
 Navigation.propTypes = {
   children: PropTypes.node.isRequired,
   orientation: PropTypes.oneOf(['horizontal', 'vertical']).isRequired,
-  fluid: PropTypes.bool.isRequired,
+  fluid: PropTypes.bool,
 };
 
 Navigation.Items = NavigationItems;

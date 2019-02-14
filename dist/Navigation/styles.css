@@ -41,6 +41,7 @@
 .fur-navigation-horizontal.fur-navigation-open > .fur-grid-container > .fur-navigation-items {
   transform: translateX(0px);
   opacity: 1;
+  margin-bottom: 0;
 }
 
 .fur-navigation-horizontal > .fur-navigation-items > .fur-user-navigation-item,
