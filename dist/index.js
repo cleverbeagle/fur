@@ -63,6 +63,12 @@ Object.defineProperty(exports, "Grid", {
     return _Grid2.default;
   }
 });
+Object.defineProperty(exports, "Pagination", {
+  enumerable: true,
+  get: function get() {
+    return _Pagination2.default;
+  }
+});
 Object.defineProperty(exports, "Panel", {
   enumerable: true,
   get: function get() {
@@ -101,6 +107,8 @@ var _Navigation2 = _interopRequireDefault(require("./Navigation"));
 var _PageHeader2 = _interopRequireDefault(require("./PageHeader"));
 
 var _Grid2 = _interopRequireDefault(require("./Grid"));
+
+var _Pagination2 = _interopRequireDefault(require("./Pagination"));
 
 var _Panel2 = _interopRequireDefault(require("./Panel"));
 

@@ -26,7 +26,7 @@ var mapGlobalPropsToChildren = function mapGlobalPropsToChildren(_ref) {
       rest = _objectWithoutProperties(_ref, ["children"]);
 
   return _react.default.Children.map(children, function (child) {
-    return _react.default.cloneElement(child, _objectSpread({}, rest));
+    return child ? _react.default.cloneElement(child, _objectSpread({}, rest)) : null;
   });
 };
 

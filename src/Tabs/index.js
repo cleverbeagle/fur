@@ -2,13 +2,23 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import Tab from '../Tab';
 
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
-    const { defaultActiveKey } = props;
-    this.state = { activeTab: defaultActiveKey || 1 };
+    const { activeTab } = props;
+    this.state = { activeTab: activeTab || 1 };
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const newActiveTab = _.get(nextProps, 'activeTab', null);
+    const { activeTab } = this.state;
+
+    if (newActiveTab && newActiveTab !== activeTab) {
+      this.setState({ activeTab: newActiveTab });
+    }
   }
 
   validateChildrenAreTabs = (children) =>
@@ -18,13 +28,15 @@ class Tabs extends React.Component {
     });
 
   handleSelectTab = (activeTab) => {
-    console.log('activeTab', activeTab);
-    this.setState({ activeTab });
+    const { onSelect } = this.props;
+    this.setState({ activeTab }, () => {
+      if (onSelect) onSelect(activeTab);
+    });
   };
 
   render() {
     const { children } = this.props;
-    const { activeTab } = this.state;
+    const activeTab = this.props.activeTab || this.state.activeTab; // eslint-disable-line
 
     this.validateChildrenAreTabs(children);
 
@@ -38,7 +50,7 @@ class Tabs extends React.Component {
       <div className="fur-tabs">
         <ul className="clearfix">
           {tabs.map(({ key, ref, props }, tabIndex) => {
-            const tabActiveKey = props.activeKey || tabIndex + 1;
+            const tabActiveKey = props.tabId || tabIndex + 1;
             return (
               <Tab
                 {...props}
@@ -53,7 +65,7 @@ class Tabs extends React.Component {
         <div className="fur-tabs-content">
           {tabs.map(
             ({ props }, tabIndex) =>
-              props.activeKey === activeTab || tabIndex + 1 === activeTab ? props.children : null,
+              props.tabId === activeTab || tabIndex + 1 === activeTab ? props.children : null,
           )}
         </div>
       </div>

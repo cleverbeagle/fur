@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Form from '.';
+import Button from '../Button';
 
 storiesOf('Form.Input', module)
   .add('Input w/ start cap', () => (
@@ -37,4 +38,10 @@ storiesOf('Form.Input', module)
     <Form.Field>
       <Form.DateTimePicker />
     </Form.Field>
+  ))
+  .add('Control', () => (
+    <Form.Control>
+      <Form.Input type="text" />
+      <Button theme="success">Save</Button>
+    </Form.Control>
   ));

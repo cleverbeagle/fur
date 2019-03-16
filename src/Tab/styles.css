@@ -7,6 +7,10 @@
   cursor: pointer;
 }
 
+.fur-tabs-tab:hover > .fur-tabs-tab-title {
+  color: var(--black);
+}
+
 .fur-tabs-tab-title {
   color: var(--black-medium);
   font-size: 13px;
@@ -14,7 +18,8 @@
   text-transform: uppercase;
 }
 
-.fur-tabs-tab-active > .fur-tabs-tab-title {
+.fur-tabs-tab-active > .fur-tabs-tab-title,
+.fur-tabs-tab-active:hover > .fur-tabs-tab-title {
   color: var(--primary);
 }
 

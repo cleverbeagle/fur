@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _lodash = _interopRequireDefault(require("lodash"));
+
 var _Tab = _interopRequireDefault(require("../Tab"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -55,27 +57,43 @@ function (_React$Component) {
     });
 
     _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleSelectTab", function (activeTab) {
-      console.log('activeTab', activeTab);
+      var onSelect = _this.props.onSelect;
 
       _this.setState({
         activeTab: activeTab
+      }, function () {
+        if (onSelect) onSelect(activeTab);
       });
     });
 
-    var defaultActiveKey = props.defaultActiveKey;
+    var _activeTab = props.activeTab;
     _this.state = {
-      activeTab: defaultActiveKey || 1
+      activeTab: _activeTab || 1
     };
     return _this;
   }
 
   _createClass(Tabs, [{
+    key: "componentWillReceiveProps",
+    value: function componentWillReceiveProps(nextProps) {
+      var newActiveTab = _lodash.default.get(nextProps, 'activeTab', null);
+
+      var activeTab = this.state.activeTab;
+
+      if (newActiveTab && newActiveTab !== activeTab) {
+        this.setState({
+          activeTab: newActiveTab
+        });
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
       var children = this.props.children;
-      var activeTab = this.state.activeTab;
+      var activeTab = this.props.activeTab || this.state.activeTab; // eslint-disable-line
+
       this.validateChildrenAreTabs(children);
       var tabs = children.map(function (tab) {
         return {
@@ -92,7 +110,7 @@ function (_React$Component) {
         var key = _ref2.key,
             ref = _ref2.ref,
             props = _ref2.props;
-        var tabActiveKey = props.activeKey || tabIndex + 1;
+        var tabActiveKey = props.tabId || tabIndex + 1;
         return _react.default.createElement(_Tab.default, _extends({}, props, {
           key: "".concat(key, "_").concat(tabIndex),
           ref: ref,
@@ -105,7 +123,7 @@ function (_React$Component) {
         className: "fur-tabs-content"
       }, tabs.map(function (_ref3, tabIndex) {
         var props = _ref3.props;
-        return props.activeKey === activeTab || tabIndex + 1 === activeTab ? props.children : null;
+        return props.tabId === activeTab || tabIndex + 1 === activeTab ? props.children : null;
       })));
     }
   }]);

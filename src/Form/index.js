@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Field from '../Field';
+import Control from '../Control';
 import Label from '../Label';
 import Input from '../Input';
 import InputWrap from '../InputWrap';
@@ -25,6 +26,7 @@ Form.propTypes = {
 };
 
 Form.Field = Field;
+Form.Control = Control;
 Form.Label = Label;
 Form.Input = Input;
 Form.InputWrap = InputWrap;

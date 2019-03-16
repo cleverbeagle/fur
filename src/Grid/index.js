@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const mapGlobalPropsToChildren = ({ children, ...rest }) =>
-  React.Children.map(children, (child) => React.cloneElement(child, { ...rest }));
+  React.Children.map(children, (child) => (child ? React.cloneElement(child, { ...rest }) : null));
 
 const Container = (props) => (
   <div className="fur-grid-container">{mapGlobalPropsToChildren(props)}</div>

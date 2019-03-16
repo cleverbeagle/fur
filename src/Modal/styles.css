@@ -7,7 +7,7 @@
   bottom: 0;
   z-index: 1001;
   overflow: scroll;
-  padding: 40px 0;
+  padding: 68px 0;
 }
 
 .fur-modal-header {
@@ -16,7 +16,12 @@
 
 }
 
-.fur-modal-header h2 {
+.fur-modal-header h1,
+.fur-modal-header h2,
+.fur-modal-header h3,
+.fur-modal-header h4,
+.fur-modal-header h5,
+.fur-modal-header h6 {
   float: left;
   font-size: 18px;
   color: var(--black);

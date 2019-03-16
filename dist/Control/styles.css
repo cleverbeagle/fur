@@ -1,0 +1,8 @@
+.fur-form-control {
+  display: flex;
+  align-items: center;
+}
+
+.fur-form-control > *:not(:last-child) {
+  margin-right: 20px;
+}

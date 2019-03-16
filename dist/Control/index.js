@@ -11,14 +11,6 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _classnames = _interopRequireDefault(require("classnames"));
 
-var _ModalHeader = _interopRequireDefault(require("../ModalHeader"));
-
-var _ModalTitle = _interopRequireDefault(require("../ModalTitle"));
-
-var _ModalBody = _interopRequireDefault(require("../ModalBody"));
-
-var _ModalFooter = _interopRequireDefault(require("../ModalFooter"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -41,94 +33,50 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-var Modal =
+var Control =
 /*#__PURE__*/
 function (_React$Component) {
-  _inherits(Modal, _React$Component);
+  _inherits(Control, _React$Component);
 
-  function Modal() {
+  function Control() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, Modal);
+    _classCallCheck(this, Control);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Modal)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Control)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "handleClose", function (event) {
-      document.body.style.overflow = 'auto';
-      var onClose = _this.props.onClose;
-      event.preventDefault();
-      if (onClose) onClose(event);
-    });
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "state", {});
 
     return _this;
   }
 
-  _createClass(Modal, [{
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
-      var open = nextProps.open; // NOTE: If modal is not currently open but will be, set overflow hidden
-      // on body to disable scroling.
-
-      if (!this.props.open && open) document.body.style.overflow = 'hidden'; // eslint-disable-line
-
-      if (this.props.open && !open) document.body.style.overflow = 'auto'; // eslint-disable-line
-    }
-  }, {
+  _createClass(Control, [{
     key: "render",
     value: function render() {
-      var _classNames;
-
       var _this$props = this.props,
-          open = _this$props.open,
-          size = _this$props.size,
           className = _this$props.className,
-          children = _this$props.children,
-          maskOpacity = _this$props.maskOpacity;
+          children = _this$props.children;
       return _react.default.createElement("div", {
-        className: (0, _classnames.default)(className, 'fur-modal', (_classNames = {}, _defineProperty(_classNames, "fur-modal-size-".concat(size), size), _defineProperty(_classNames, 'fur-modal-open', open), _classNames))
-      }, _react.default.createElement("div", {
-        className: "fur-modal-close-icon"
-      }), _react.default.createElement("div", {
-        className: "fur-modal-content"
-      }, children), _react.default.createElement("div", {
-        tabIndex: 0,
-        role: "button",
-        className: "fur-modal-mask",
-        style: {
-          background: "rgba(135, 151, 178, ".concat(maskOpacity, ")")
-        },
-        onClick: this.handleClose,
-        onKeyUp: this.handleClose
-      }));
+        className: (0, _classnames.default)('fur-form-control', className)
+      }, children);
     }
   }]);
 
-  return Modal;
+  return Control;
 }(_react.default.Component);
 
-Modal.Header = _ModalHeader.default;
-Modal.Title = _ModalTitle.default;
-Modal.Body = _ModalBody.default;
-Modal.Footer = _ModalFooter.default;
-Modal.defaultProps = {
-  open: false,
-  size: '',
-  className: '',
-  maskOpacity: 0.75
+Control.defaultProps = {
+  className: null
 };
-Modal.propTypes = {
-  open: _propTypes.default.bool,
-  size: _propTypes.default.string,
-  className: _propTypes.default.string,
+Control.propTypes = {
   children: _propTypes.default.node.isRequired,
-  onClose: _propTypes.default.func.isRequired,
-  maskOpacity: _propTypes.default.number
+  className: _propTypes.default.string
 };
-var _default = Modal;
+var _default = Control;
 exports.default = _default;

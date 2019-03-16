@@ -11,6 +11,8 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _Field = _interopRequireDefault(require("../Field"));
 
+var _Control = _interopRequireDefault(require("../Control"));
+
 var _Label = _interopRequireDefault(require("../Label"));
 
 var _Input = _interopRequireDefault(require("../Input"));
@@ -96,6 +98,7 @@ Form.propTypes = {
   children: _propTypes.default.node.isRequired
 };
 Form.Field = _Field.default;
+Form.Control = _Control.default;
 Form.Label = _Label.default;
 Form.Input = _Input.default;
 Form.InputWrap = _InputWrap.default;

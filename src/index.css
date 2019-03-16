@@ -4,6 +4,7 @@
 @import './Button/styles.css';
 @import './ButtonGroup/styles.css';
 @import './Checkbox/styles.css';
+@import './Control/styles.css';
 @import './DateTimePicker/styles.css';
 @import './Field/styles.css';
 @import './Grid/styles.css';
@@ -21,6 +22,7 @@
 @import './NavigationToggle/styles.css';
 @import './PageHeader/styles.css';
 @import './PageHeaderTitle/styles.css';
+@import './Pagination/styles.css';
 @import './Panel/styles.css';
 @import './ProgressBar/styles.css';
 @import './Select/styles.css';

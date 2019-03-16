@@ -28,6 +28,17 @@
   color: var(--black-dark);
 }
 
+.fur-form-input[type="text"]:disabled,
+.fur-form-input[type="email"]:disabled,
+.fur-form-input[type="password"]:disabled,
+.fur-form-input[type="url"]:disabled,
+.fur-form-input[type="number"]:disabled {
+  border: 1px solid var(--black-light);
+  background: var(--black-light);
+  color: var(--black);
+  box-shadow: none;
+}
+
 .fur-form-input::-webkit-input-placeholder {
   color: #a6aab8;
 }

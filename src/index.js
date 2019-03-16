@@ -10,6 +10,7 @@ export Modal from './Modal';
 export Navigation from './Navigation';
 export PageHeader from './PageHeader';
 export Grid from './Grid';
+export Pagination from './Pagination';
 export Panel from './Panel';
 export ProgressBar from './ProgressBar';
 export Tabs from './Tabs';

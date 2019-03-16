@@ -12,17 +12,14 @@ class Modal extends React.Component {
 
     // NOTE: If modal is not currently open but will be, set overflow hidden
     // on body to disable scroling.
-    if (!this.props.open && open) { // eslint-disable-line
-      document.body.style.overflow = 'hidden';
-    }
+    if (!this.props.open && open) document.body.style.overflow = 'hidden'; // eslint-disable-line
+    if (this.props.open && !open) document.body.style.overflow = 'auto'; // eslint-disable-line
   }
 
   handleClose = (event) => {
+    document.body.style.overflow = 'auto';
     const { onClose } = this.props;
     event.preventDefault();
-
-    document.body.style.overflow = 'auto';
-
     if (onClose) onClose(event);
   };
 

@@ -8,3 +8,8 @@
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.06);
   border-radius: 3px;
 }
+
+/* NOTE: Apply space between items that are NOT dividers. */
+.fur-navigation-items > .fur-navigation-item:not(:last-child):not(.fur-navigation-item-divider) {
+  margin-bottom: 5px;
+}

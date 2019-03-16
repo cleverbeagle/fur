@@ -5,9 +5,18 @@ import Input from '../Input';
 
 class DateTimePicker extends React.Component {
   componentDidMount() {
-    const { options } = this.props;
-    this.flatpickr = flatpickr(this.dateTimePicker, options);
+    this.attachFlatpickr(this.props);
   }
+
+  componentWillReceiveProps(nextProps) {
+    this.attachFlatpickr(nextProps);
+  }
+
+  attachFlatpickr = (props) => {
+    if (this.flatpickr) this.flatpickr.destroy();
+    const { options } = props;
+    this.flatpickr = flatpickr(this.dateTimePicker, options);
+  };
 
   render() {
     const { options, ...rest } = this.props;

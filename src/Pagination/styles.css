@@ -1,0 +1,50 @@
+.fur-pagination {
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.fur-pagination > .fur-pagination-page {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding: 9px 19px;
+  font-size: 15px;
+  color: var(--black);
+  border: 1px solid var(--black-light);
+  margin-left: -1px;
+  border-radius: 0;
+  z-index: 1;
+}
+
+.fur-pagination > .fur-pagination-page:hover {
+  background: var(--black-light);
+  cursor: pointer;
+}
+
+.fur-pagination > .fur-pagination-page:not(:last-child) {
+  border-right: 1px solid var(--black-light);
+}
+
+.fur-pagination > .fur-pagination-page:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+.fur-pagination > .fur-pagination-page:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+.fur-pagination > .fur-pagination-page + .fur-pagination-page {
+  border-left: none;
+}
+
+.fur-pagination > .fur-pagination-page-active,
+.fur-pagination > .fur-pagination-page-active:hover {
+  background: var(--primary);
+  border-color: var(--primary) !important;
+  color: #fff;
+  z-index: 2;
+}
+
+.fur-pagination > .fur-pagination-page-active + .fur-pagination-page-active {
+  border-left: 1px solid #3171da !important;
+}
