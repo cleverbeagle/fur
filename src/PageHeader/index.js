@@ -8,9 +8,13 @@ const PageHeader = ({ className, children }) => (
   <div className={classNames('fur-page-header', className)}>{children}</div>
 );
 
+PageHeader.defaultProps = {
+  className: null,
+};
+
 PageHeader.propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 PageHeader.Title = PageHeaderTitle;

@@ -25,9 +25,12 @@ var PageHeader = function PageHeader(_ref) {
   }, children);
 };
 
+PageHeader.defaultProps = {
+  className: null
+};
 PageHeader.propTypes = {
   children: _propTypes.default.node.isRequired,
-  className: _propTypes.default.string.isRequired
+  className: _propTypes.default.string
 };
 PageHeader.Title = _PageHeaderTitle.default;
 PageHeader.Action = _PageHeaderAction.default;

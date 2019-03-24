@@ -48,8 +48,8 @@ src: url('./fonts/Roboto-BoldItalic-webfont.woff') format('woff'), /* Pretty Mod
 --success: #00D490;
 --warning: #FFCF50;
 --danger: #EA4335;
---black-dark: #4e5264;
---black: #676d84;
+--black-dark: #676d84;
+--black: #83879a;
 --black-medium: #C9CFDE;
 --black-light: #ECEEF4;
 }

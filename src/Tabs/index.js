@@ -50,7 +50,7 @@ class Tabs extends React.Component {
       <div className="fur-tabs">
         <ul className="clearfix">
           {tabs.map(({ key, ref, props }, tabIndex) => {
-            const tabActiveKey = props.tabId || tabIndex + 1;
+            const tabActiveKey = props.tabid || tabIndex + 1;
             return (
               <Tab
                 {...props}
@@ -65,7 +65,7 @@ class Tabs extends React.Component {
         <div className="fur-tabs-content">
           {tabs.map(
             ({ props }, tabIndex) =>
-              props.tabId === activeTab || tabIndex + 1 === activeTab ? props.children : null,
+              props.tabid === activeTab || tabIndex + 1 === activeTab ? props.children : null,
           )}
         </div>
       </div>

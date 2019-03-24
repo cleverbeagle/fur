@@ -57,13 +57,14 @@ Modal.defaultProps = {
   size: '',
   className: '',
   maskOpacity: 0.75,
+  children: null,
 };
 
 Modal.propTypes = {
   open: PropTypes.bool,
   size: PropTypes.string,
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   onClose: PropTypes.func.isRequired,
   maskOpacity: PropTypes.number,
 };
