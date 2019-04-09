@@ -13,7 +13,7 @@ storiesOf('ButtonGroup', module)
   ))
   .add('First button active', () => (
     <ButtonGroup>
-      <Button theme="primary">One</Button>
+      <Button theme="default">One</Button>
       <Button theme="default">Two</Button>
     </ButtonGroup>
   ))
@@ -21,5 +21,12 @@ storiesOf('ButtonGroup', module)
     <ButtonGroup>
       <Button theme="default">One</Button>
       <Button theme="primary">Two</Button>
+    </ButtonGroup>
+  ))
+  .add('Middle button active', () => (
+    <ButtonGroup>
+      <Button theme="default">One</Button>
+      <Button theme="primary">Two</Button>
+      <Button theme="default">Three</Button>
     </ButtonGroup>
   ));
