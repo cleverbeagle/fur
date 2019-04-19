@@ -27,7 +27,7 @@ class Navigation extends React.Component {
         })}
       >
         {React.Children.map(children, (child) =>
-          React.cloneElement(child, { toggleNavigation: this.toggleNavigation }),
+          React.cloneElement(child, { togglenavigation: this.toggleNavigation }),
         )}
       </div>
     );

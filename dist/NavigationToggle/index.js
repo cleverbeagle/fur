@@ -14,18 +14,18 @@ var _Button = _interopRequireDefault(require("../Button"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var NavigationToggle = function NavigationToggle(_ref) {
-  var toggleNavigation = _ref.toggleNavigation;
+  var togglenavigation = _ref.togglenavigation;
   return _react.default.createElement(_Button.default, {
     className: "fur-navigation-toggle",
-    onClick: toggleNavigation
+    onClick: togglenavigation
   }, _react.default.createElement("span", null), _react.default.createElement("span", null), _react.default.createElement("span", null));
 };
 
 NavigationToggle.defaultProps = {
-  toggleNavigation: function toggleNavigation() {}
+  togglenavigation: function togglenavigation() {}
 };
 NavigationToggle.propTypes = {
-  toggleNavigation: _propTypes.default.func
+  togglenavigation: _propTypes.default.func
 };
 var _default = NavigationToggle;
 exports.default = _default;

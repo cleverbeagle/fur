@@ -13,6 +13,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -57,10 +63,18 @@ function (_React$Component) {
   _createClass(Select, [{
     key: "render",
     value: function render() {
-      var children = this.props.children;
+      var _this$props = this.props,
+          innerRef = _this$props.innerRef,
+          children = _this$props.children,
+          disabled = _this$props.disabled,
+          rest = _objectWithoutProperties(_this$props, ["innerRef", "children", "disabled"]);
+
       return _react.default.createElement("div", {
         className: "fur-form-select"
-      }, _react.default.createElement("select", this.props, children));
+      }, _react.default.createElement("select", _extends({
+        ref: innerRef,
+        disabled: disabled
+      }, rest), children));
     }
   }]);
 
@@ -70,5 +84,11 @@ function (_React$Component) {
 Select.propTypes = {
   children: _propTypes.default.node.isRequired
 };
-var _default = Select;
+
+var _default = _react.default.forwardRef(function (props, ref) {
+  return _react.default.createElement(Select, _extends({
+    innerRef: ref
+  }, props));
+});
+
 exports.default = _default;

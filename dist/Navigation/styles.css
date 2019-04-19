@@ -110,6 +110,7 @@
   .fur-navigation-horizontal > .fur-grid-container > .fur-navigation-items > .fur-navigation-item > .fur-navigation-items {
     display: none;
     position: absolute;
+    right: -5px;
     z-index: 1;
     background: #fff;
     margin: 5px 0 0;
@@ -166,6 +167,6 @@
     margin-top: 14px;
     margin-bottom: 0;
     left: auto;
-    right: 0;
+    right: -5px;
   }
 }

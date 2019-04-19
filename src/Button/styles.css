@@ -14,6 +14,11 @@
   text-transform: uppercase;
 }
 
+.fur-button:disabled {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
 .fur-button-block {
   width: 100%;
   display: block;

@@ -28,19 +28,21 @@ var Button = function Button(_ref) {
       rest = _objectWithoutProperties(_ref, ["type", "theme", "block", "className", "children"]);
 
   return _react.default.createElement("button", _extends({}, rest, {
-    type: type || 'button',
-    className: (0, _classnames.default)('fur-button', "fur-button-".concat(theme || 'default'), {
+    type: type,
+    className: (0, _classnames.default)('fur-button', "fur-button-".concat(theme), {
       'fur-button-block': block
     }, className)
   }), children);
 };
 
 Button.defaultProps = {
+  type: 'button',
   className: null,
   theme: 'default',
   block: false
 };
 Button.propTypes = {
+  type: _propTypes.default.string,
   className: _propTypes.default.string,
   theme: _propTypes.default.string,
   block: _propTypes.default.bool,

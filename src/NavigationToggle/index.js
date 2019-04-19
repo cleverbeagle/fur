@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button';
 
-const NavigationToggle = ({ toggleNavigation }) => (
-  <Button className="fur-navigation-toggle" onClick={toggleNavigation}>
+const NavigationToggle = ({ togglenavigation }) => (
+  <Button className="fur-navigation-toggle" onClick={togglenavigation}>
     <span />
     <span />
     <span />
@@ -11,11 +11,11 @@ const NavigationToggle = ({ toggleNavigation }) => (
 );
 
 NavigationToggle.defaultProps = {
-  toggleNavigation: () => {},
+  togglenavigation: () => {},
 };
 
 NavigationToggle.propTypes = {
-  toggleNavigation: PropTypes.func,
+  togglenavigation: PropTypes.func,
 };
 
 export default NavigationToggle;

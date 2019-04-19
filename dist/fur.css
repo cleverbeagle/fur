@@ -444,6 +444,11 @@ template {
   text-transform: uppercase;
 }
 
+.fur-button:disabled {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
 .fur-button-block {
   width: 100%;
   display: block;
@@ -2684,6 +2689,7 @@ span.flatpickr-day.selected {
   .fur-navigation-horizontal > .fur-grid-container > .fur-navigation-items > .fur-navigation-item > .fur-navigation-items {
     display: none;
     position: absolute;
+    right: -5px;
     z-index: 1;
     background: #fff;
     margin: 5px 0 0;
@@ -2740,7 +2746,7 @@ span.flatpickr-day.selected {
     margin-top: 14px;
     margin-bottom: 0;
     left: auto;
-    right: 0;
+    right: -5px;
   }
 }
 .fur-navigation-item > button {
@@ -2886,7 +2892,7 @@ span.flatpickr-day.selected {
   }
 }
 .fur-page-header-title {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 26px;
   font-weight: 400;
   color: var(--black);

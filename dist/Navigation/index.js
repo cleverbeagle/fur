@@ -89,7 +89,7 @@ function (_React$Component) {
         className: (0, _classnames.default)((_classNames = {}, _defineProperty(_classNames, "fur-navigation-".concat(orientation), !!orientation), _defineProperty(_classNames, 'fur-navigation-open', open), _defineProperty(_classNames, 'fur-navigation-fluid', fluid), _classNames))
       }, _react.default.Children.map(children, function (child) {
         return _react.default.cloneElement(child, {
-          toggleNavigation: _this2.toggleNavigation
+          togglenavigation: _this2.toggleNavigation
         });
       }));
     }
