@@ -13,9 +13,10 @@
 
 .fur-tabs-tab-title {
   color: var(--black-medium);
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.02em;
   font-weight: normal;
+  text-transform: uppercase;
 }
 
 .fur-tabs-tab-active > .fur-tabs-tab-title,
@@ -36,6 +37,6 @@
 
 @media screen and (min-width: 768px) {
   .fur-tabs-tab-title {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
