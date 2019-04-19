@@ -5,17 +5,24 @@ class Select extends React.Component {
   state = {};
 
   render() {
-    const { children } = this.props;
+    const { innerRef, children } = this.props;
     return (
       <div className="fur-form-select">
-        <select {...this.props}>{children}</select>
+        <select ref={innerRef} {...this.props}>
+          {children}
+        </select>
       </div>
     );
   }
 }
 
+Select.defaultProps = {
+  innerRef: null,
+};
+
 Select.propTypes = {
   children: PropTypes.node.isRequired,
+  innerRef: PropTypes.func,
 };
 
 export default Select;

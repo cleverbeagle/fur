@@ -13,6 +13,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -57,18 +59,26 @@ function (_React$Component) {
   _createClass(Select, [{
     key: "render",
     value: function render() {
-      var children = this.props.children;
+      var _this$props = this.props,
+          innerRef = _this$props.innerRef,
+          children = _this$props.children;
       return _react.default.createElement("div", {
         className: "fur-form-select"
-      }, _react.default.createElement("select", this.props, children));
+      }, _react.default.createElement("select", _extends({
+        ref: innerRef
+      }, this.props), children));
     }
   }]);
 
   return Select;
 }(_react.default.Component);
 
+Select.defaultProps = {
+  innerRef: null
+};
 Select.propTypes = {
-  children: _propTypes.default.node.isRequired
+  children: _propTypes.default.node.isRequired,
+  innerRef: _propTypes.default.func
 };
 var _default = Select;
 exports.default = _default;

@@ -3049,7 +3049,7 @@ span.flatpickr-day.selected {
   box-shadow: none;
 }
 .fur-tabs-tab {
-  padding: 0 0 10px;
+  padding: 0 0 8px;
   position: relative;
 }
 
@@ -3063,9 +3063,9 @@ span.flatpickr-day.selected {
 
 .fur-tabs-tab-title {
   color: var(--black-medium);
-  font-size: 13px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  font-weight: normal;
 }
 
 .fur-tabs-tab-active > .fur-tabs-tab-title,
@@ -3080,8 +3080,14 @@ span.flatpickr-day.selected {
   bottom: -1px;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 2px;
   background: var(--primary);
+}
+
+@media screen and (min-width: 768px) {
+  .fur-tabs-tab-title {
+    font-size: 15px;
+  }
 }
 .fur-tabs > ul {
   list-style: none;
@@ -3102,11 +3108,17 @@ span.flatpickr-day.selected {
 }
 
 .fur-tabs > ul > li:not(:last-child) {
-  margin-right: 23px;
+  margin-right: 20px;
 }
 
 .fur-tabs-content {
   margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .fur-tabs > ul > li:not(:last-child) {
+    margin-right: 25px;
+  }
 }
 .fur-form-textarea {
   border: 1px solid var(--black-light);
