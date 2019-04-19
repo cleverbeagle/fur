@@ -16,8 +16,13 @@ class Select extends React.Component {
   }
 }
 
+Select.defaultProps = {
+  innerRef: null,
+};
+
 Select.propTypes = {
   children: PropTypes.node.isRequired,
+  innerRef: PropTypes.func,
 };
 
 export default React.forwardRef((props, ref) => <Select innerRef={ref} {...props} />);

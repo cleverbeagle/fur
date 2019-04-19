@@ -17,9 +17,15 @@
 }
 
 .fur-tabs > ul > li:not(:last-child) {
-  margin-right: 23px;
+  margin-right: 20px;
 }
 
 .fur-tabs-content {
   margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .fur-tabs > ul > li:not(:last-child) {
+    margin-right: 25px;
+  }
 }
