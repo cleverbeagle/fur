@@ -19,10 +19,6 @@
   z-index: 1;
 }
 
-/* .fur-form-input-wrap .fur-form-input:focus {
-  box-shadow: 0px 0px 1px 1px var(--black-light);
-} */
-
 .fur-form-input-wrap > .fur-form-input-cap:first-child {
   background: #fff;
   border: 1px solid var(--black-light);
