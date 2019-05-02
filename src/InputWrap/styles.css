@@ -45,6 +45,10 @@
   border-radius: 3px 0 0 3px;
 }
 
+.fur-form-input-wrap > .fur-form-input:last-child {
+  border-radius: 0px 3px 3px 0px;
+}
+
 .fur-form-input-wrap .fur-form-input:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
