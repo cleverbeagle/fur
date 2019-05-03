@@ -6,6 +6,4 @@ git commit -m "release "$1""
 npm version "$1"
 npm publish
 
-echo "Version $1 published"
-
 exit 0
