@@ -79,6 +79,13 @@
   box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.04);
 }
 
+/* NOTE: Firefox doesn't respect padding and collapses so a margin on the content is required. */
+@-moz-document url-prefix() {
+  .fur-modal-content {
+    margin-bottom: 68px;
+  }
+}
+
 .fur-modal-open {
   display: block;
 }
@@ -111,5 +118,11 @@
 @media screen and (min-width: 768px) {
   .fur-modal {
     padding: 50px;
+  }
+
+  @-moz-document url-prefix() {
+    .fur-modal-content {
+      margin-bottom: 50px;
+    }
   }
 }
