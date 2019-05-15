@@ -38,7 +38,7 @@ class Tabs extends React.Component {
     const { children } = this.props;
     const activeTab = this.props.activeTab || this.state.activeTab; // eslint-disable-line
 
-    this.validateChildrenAreTabs(children);
+    // this.validateChildrenAreTabs(children);
 
     const tabs = children.map((tab) => ({
       key: tab.key,

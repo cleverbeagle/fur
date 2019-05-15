@@ -23,6 +23,13 @@ storiesOf('Form.Input', module)
       <Form.InputCap>Test</Form.InputCap>
     </Form.InputWrap>
   ))
+  .add('Multiple inputs', () => (
+    <Form.InputWrap>
+      <Form.Input type="text" />
+      <Form.Input type="text" />
+      <Form.Input type="text" />
+    </Form.InputWrap>
+  ))
   .add('Input w/ Legend', () => (
     <Form.Field>
       <Form.Legend>This is a legend</Form.Legend>

@@ -93,8 +93,8 @@ function (_React$Component) {
 
       var children = this.props.children;
       var activeTab = this.props.activeTab || this.state.activeTab; // eslint-disable-line
+      // this.validateChildrenAreTabs(children);
 
-      this.validateChildrenAreTabs(children);
       var tabs = children.map(function (tab) {
         return {
           key: tab.key,
