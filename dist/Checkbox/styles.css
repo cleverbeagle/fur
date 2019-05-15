@@ -23,6 +23,10 @@
   bottom: 0;
   border-radius: 2px;
   z-index: 2;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
 }
 
 .fur-checkbox > [type="checkbox"]:checked + .fur-checkbox-box:before {
