@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -57,9 +59,11 @@ function (_React$Component) {
   _createClass(Legend, [{
     key: "render",
     value: function render() {
-      var children = this.props.children;
+      var _this$props = this.props,
+          className = _this$props.className,
+          children = _this$props.children;
       return _react.default.createElement("div", {
-        className: "fur-form-legend clearfix"
+        className: (0, _classnames.default)('fur-form-legend', 'clearfix', className)
       }, children);
     }
   }]);
@@ -67,8 +71,12 @@ function (_React$Component) {
   return Legend;
 }(_react.default.Component);
 
+Legend.defaultProps = {
+  className: null
+};
 Legend.propTypes = {
-  children: _propTypes.default.node.isRequired
+  children: _propTypes.default.node.isRequired,
+  className: _propTypes.default.string
 };
 var _default = Legend;
 exports.default = _default;
