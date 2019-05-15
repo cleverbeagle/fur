@@ -9,6 +9,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _propTypes = _interopRequireDefault(require("prop-types"));
 
+var _classnames = _interopRequireDefault(require("classnames"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -65,10 +67,11 @@ function (_React$Component) {
     value: function render() {
       var _this$props = this.props,
           inputRef = _this$props.inputRef,
-          rest = _objectWithoutProperties(_this$props, ["inputRef"]);
+          className = _this$props.className,
+          rest = _objectWithoutProperties(_this$props, ["inputRef", "className"]);
 
       return _react.default.createElement("input", _extends({
-        className: "fur-form-input",
+        className: (0, _classnames.default)('fur-form-input', className),
         ref: inputRef
       }, rest));
     }
@@ -79,11 +82,13 @@ function (_React$Component) {
 
 Input.defaultProps = {
   inputRef: null,
-  type: 'text'
+  type: 'text',
+  className: null
 };
 Input.propTypes = {
   inputRef: _propTypes.default.func,
-  type: _propTypes.default.string
+  type: _propTypes.default.string,
+  className: _propTypes.default.string
 };
 var _default = Input;
 exports.default = _default;
