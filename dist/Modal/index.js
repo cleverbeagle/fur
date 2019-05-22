@@ -75,14 +75,19 @@ function (_React$Component) {
       var open = nextProps.open; // NOTE: If modal is not currently open but will be, set overflow hidden
       // on body to disable scroling.
 
-      if (!this.props.open && open) document.body.style.overflow = 'hidden'; // eslint-disable-line
+      if (!this.props.open && open) {
+        document.body.style.overflow = 'hidden'; // eslint-disable-line
+
+        this.modal.scrollTo(0, 0);
+      }
 
       if (this.props.open && !open) document.body.style.overflow = 'auto'; // eslint-disable-line
     }
   }, {
     key: "render",
     value: function render() {
-      var _classNames;
+      var _this2 = this,
+          _classNames;
 
       var _this$props = this.props,
           open = _this$props.open,
@@ -91,6 +96,9 @@ function (_React$Component) {
           children = _this$props.children,
           maskOpacity = _this$props.maskOpacity;
       return _react.default.createElement("div", {
+        ref: function ref(modal) {
+          return _this2.modal = modal;
+        },
         className: (0, _classnames.default)(className, 'fur-modal', (_classNames = {}, _defineProperty(_classNames, "fur-modal-size-".concat(size), size), _defineProperty(_classNames, 'fur-modal-open', open), _classNames))
       }, _react.default.createElement("div", {
         className: "fur-modal-close-icon"

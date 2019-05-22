@@ -12,7 +12,11 @@ class Modal extends React.Component {
 
     // NOTE: If modal is not currently open but will be, set overflow hidden
     // on body to disable scroling.
-    if (!this.props.open && open) document.body.style.overflow = 'hidden'; // eslint-disable-line
+    if (!this.props.open && open) {
+      document.body.style.overflow = 'hidden'; // eslint-disable-line
+      this.modal.scrollTo(0, 0);
+    }
+
     if (this.props.open && !open) document.body.style.overflow = 'auto'; // eslint-disable-line
   }
 
@@ -27,6 +31,7 @@ class Modal extends React.Component {
     const { open, size, className, children, maskOpacity } = this.props;
     return (
       <div
+        ref={(modal) => (this.modal = modal)}
         className={classNames(className, 'fur-modal', {
           [`fur-modal-size-${size}`]: size,
           'fur-modal-open': open,
