@@ -1,31 +1,70 @@
-/* NOTE: the order of these styles DO matter */
-
-/* Will edit everything selected including everything between a range of dates */
-.CalendarDay__selected_span {
-  background: #82e0aa;
-  color: white;
-  border: 1px solid red;
+.fur-form-input-datepicker {
+  position: relative;
 }
 
-/* Will edit selected date or the endpoints of a range of dates */
-.CalendarDay__selected {
-  background: red;
-  color: white;
+.fur-form-input-datepicker .DayPicker {
+  position: absolute;
+  top: 50px;
 }
 
-/* Will edit when hovered over. _span style also has this property */
-.CalendarDay__selected:hover {
-  background: orange;
-  color: white;
+.CalendarMonth_caption {
+  color: var(--black) !important;
+  text-transform: uppercase;
+  padding-bottom: 42px !important;
 }
 
-/* Will edit when the second date (end date) in a range of dates
-   is not yet selected. Edits the dates between your mouse and said date */
-.CalendarDay__hovered_span:hover,
-.CalendarDay__hovered_span {
-  background: brown;
+.DayPickerNavigation_button svg {
+  width: 18px;
+  height: 18px;
 }
 
+.DayPickerNavigation_button svg path {
+  fill: var(--black-medium);
+}
+
+.DayPickerNavigation_button svg:hover path {
+  fill: var(--black);
+}
+
+.DayPickerNavigation_button {
+  position: absolute;
+  top: 22px;
+}
+
+.DayPickerNavigation .DayPickerNavigation_button:first-child {
+  left: 27px;
+}
+
+.DayPickerNavigation .DayPickerNavigation_button:last-child {
+  right: 27px;
+}
+
+.DayPicker_weekHeader_ul {
+  font-size: 16px !important;
+  text-transform: uppercase;
+}
+
+.DayPicker_weekHeader_li {
+  color: var(--black-medium) !important;
+  font-weight: 600;
+}
+
+.CalendarDay__default {
+  color: var(--black) !important;
+  border: 1px solid transparent !important;
+  font-size: 15px !important;
+  border-radius: 3px !important;
+}
+
+.CalendarDay__default:hover {
+  background: var(--black-light) !important;
+  border: 1px solid var(--black-light) !important;
+  color: inherit;
+}
+
+.DayPickerNavigation_button__default {
+  border: none !important;
+}
 
 .flatpickr-calendar {
   background: #fff;
