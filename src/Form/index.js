@@ -9,7 +9,7 @@ import InputCap from '../InputCap';
 import Select from '../Select';
 import Textarea from '../Textarea';
 import Checkbox from '../Checkbox';
-import DateTimePicker from '../DateTimePicker';
+import DatePicker from '../DatePicker';
 import Legend from '../Legend';
 
 class Form extends React.Component {
@@ -34,7 +34,7 @@ Form.InputCap = InputCap;
 Form.Select = Select;
 Form.Textarea = Textarea;
 Form.Checkbox = Checkbox;
-Form.DateTimePicker = DateTimePicker;
+Form.DatePicker = DatePicker;
 Form.Legend = Legend;
 
 export default Form;

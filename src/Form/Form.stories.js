@@ -41,9 +41,9 @@ storiesOf('Form.Input', module)
       <Form.Checkbox />
     </Form.Field>
   ))
-  .add('DateTimePicker', () => (
+  .add('DatePicker', () => (
     <Form.Field>
-      <Form.DateTimePicker />
+      <Form.DatePicker />
     </Form.Field>
   ))
   .add('Control', () => (

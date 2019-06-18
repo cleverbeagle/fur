@@ -21,7 +21,12 @@
 .fur-form-input[type="email"]:focus,
 .fur-form-input[type="password"]:focus,
 .fur-form-input[type="url"]:focus,
-.fur-form-input[type="number"]:focus {
+.fur-form-input[type="number"]:focus,
+.fur-form-input-focused[type="text"],
+.fur-form-input-focused[type="email"],
+.fur-form-input-focused[type="password"],
+.fur-form-input-focused[type="url"],
+.fur-form-input-focused[type="number"] {
   outline: 0;
   border: 1px solid var(--primary);
   box-shadow: 0px 0px 1px 1px rgba(66, 133, 244, 0.3);
