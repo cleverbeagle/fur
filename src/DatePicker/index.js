@@ -12,11 +12,17 @@ class DatePicker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: null,
-      endDate: null,
+      startDate: props.startDate,
+      endDate: props.endDate,
       open: false,
     };
   }
+
+  // componentWillReceiveProps(nextProps) {
+  //   this.setState({
+  //     ...nextProps,
+  //   });
+  // }
 
   componentWillMount() {
     document.addEventListener('click', this.handleClick, false);
@@ -34,15 +40,20 @@ class DatePicker extends React.Component {
   handleClick = (event) => {
     const input = this.datePicker.querySelector('.fur-form-input');
     const calendar = this.datePicker.querySelector('.DayPicker');
+    const calendarDay = this.datePicker.querySelector('.CalendarDay');
 
-    if (!input.contains(event.target) && !calendar.contains(event.target)) {
+    if (
+      !input.contains(event.target) &&
+      !calendar.contains(event.target) &&
+      !calendarDay.contains(event.target)
+    ) {
       this.setState({ open: false });
     }
   };
 
   render() {
-    const { mode, onDatesChange, ...rest } = this.props;
-    const { open } = this.state;
+    const { mode, ...rest } = this.props;
+    const { open, startDate, endDate } = this.state;
 
     return (
       <div
@@ -59,14 +70,12 @@ class DatePicker extends React.Component {
           mode === 'range' &&
           open && (
             <DayPickerRangeController
-              {...rest}
-              onDatesChange={(dates) =>
-                // NOTE: Do this to avoid breaking API while managing state internally.
-                this.setState(
-                  { ...dates, open: false },
-                  () => (onDatesChange ? onDatesChange(dates) : null),
-                )
-              }
+              startDate={this.state.startDate}
+              endDate={this.state.endDate}
+              onDatesChange={({ startDate, endDate }) => {
+                console.log(startDate, endDate);
+                this.setState({ startDate, endDate });
+              }}
               weekDayFormat="ddd"
               navPrev={
                 <svg version="1.1" viewBox="0 0 17 17">
@@ -80,6 +89,8 @@ class DatePicker extends React.Component {
                   <path d="M13.207 8.472l-7.854 7.854-0.707-0.707 7.146-7.146-7.146-7.148 0.707-0.707 7.854 7.854z" />
                 </svg>
               }
+              focusedInput={null}
+              onFocusChange={() => {}}
               transitionDuration={0}
               hideKeyboardShortcutsPanel
             />
@@ -89,13 +100,6 @@ class DatePicker extends React.Component {
           open && (
             <DayPickerSingleDateController
               {...rest}
-              onDatesChange={(dates) =>
-                // NOTE: Do this to avoid breaking API while managing state internally.
-                this.setState(
-                  { ...dates, open: false },
-                  () => (onDatesChange ? onDatesChange(dates) : null),
-                )
-              }
               weekDayFormat="ddd"
               navPrev={
                 <svg version="1.1" viewBox="0 0 17 17">

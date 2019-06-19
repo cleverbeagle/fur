@@ -1,7 +1,31 @@
 import React from 'react';
+import moment from 'moment';
 import { storiesOf } from '@storybook/react';
 import Form from '.';
 import Button from '../Button';
+
+class TestWithState extends React.Component {
+  state = {
+    startDate: moment(),
+    endDate: moment().add(1, 'week'),
+  };
+
+  render() {
+    return (
+      <Form.Field>
+        <Form.DatePicker
+          mode="range"
+          // startDate={this.state.startDate}
+          // endDate={this.state.endDate}
+          // onDatesChange={(dates) => {
+          //   console.log(dates, 'working');
+          //   this.setState(dates);
+          // }}
+        />
+      </Form.Field>
+    );
+  }
+}
 
 storiesOf('Form.Input', module)
   .add('Input w/ start cap', () => (
@@ -42,9 +66,7 @@ storiesOf('Form.Input', module)
     </Form.Field>
   ))
   .add('DatePicker', () => (
-    <Form.Field>
-      <Form.DatePicker />
-    </Form.Field>
+    <TestWithState />
   ))
   .add('Control', () => (
     <Form.Control>

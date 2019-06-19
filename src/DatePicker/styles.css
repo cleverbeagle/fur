@@ -13,6 +13,10 @@
   padding-bottom: 42px !important;
 }
 
+.DayPickerNavigation_button__default {
+  border: none !important;
+}
+
 .DayPickerNavigation_button svg {
   width: 18px;
   height: 18px;
@@ -46,24 +50,44 @@
 
 .DayPicker_weekHeader_li {
   color: var(--black-medium) !important;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .CalendarDay__default {
   color: var(--black) !important;
-  border: 1px solid transparent !important;
+  border: none !important;
   font-size: 15px !important;
   border-radius: 3px !important;
 }
 
 .CalendarDay__default:hover {
   background: var(--black-light) !important;
-  border: 1px solid var(--black-light) !important;
+  border: none !important;
   color: inherit;
 }
 
-.DayPickerNavigation_button__default {
-  border: none !important;
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover,
+.CalendarDay__selected_span:hover,
+.CalendarDay__selected_start:hover,
+.CalendarDay__selected_end:hover {
+  background: var(--primary) !important;
+  color: #fff !important;
+}
+
+.CalendarDay__selected_span {
+  background: var(--primary) !important;
+  color: #fff !important;
+  border-radius: 0px !important;
+}
+
+.CalendarDay__selected_start {
+  border-radius: 3px 0 0 3px !important;
+}
+
+.CalendarDay__selected_end {
+  border-radius: 0px 3px 3px 0px !important;
 }
 
 .flatpickr-calendar {
