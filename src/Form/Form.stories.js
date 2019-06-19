@@ -43,7 +43,9 @@ storiesOf('Form.Input', module)
   ))
   .add('DateTimePicker', () => (
     <Form.Field>
-      <Form.DateTimePicker />
+      <Form.DateTimePicker
+        options={{ mode: 'range' }}
+      />
     </Form.Field>
   ))
   .add('Control', () => (

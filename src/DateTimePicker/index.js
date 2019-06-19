@@ -9,7 +9,7 @@ class DateTimePicker extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.attachFlatpickr(nextProps);
+    // this.attachFlatpickr(nextProps);
   }
 
   attachFlatpickr = (props) => {
@@ -17,6 +17,10 @@ class DateTimePicker extends React.Component {
     const { options } = props;
     this.flatpickr = flatpickr(this.dateTimePicker, options);
   };
+
+  openFlatpickr = () => {
+    if (this.flatpickr) this.flatpickr.open();
+  }
 
   render() {
     const { options, ...rest } = this.props;
