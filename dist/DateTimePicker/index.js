@@ -78,10 +78,6 @@ function (_React$Component) {
       this.attachFlatpickr(this.props);
     }
   }, {
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {// this.attachFlatpickr(nextProps);
-    }
-  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
