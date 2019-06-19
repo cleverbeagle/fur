@@ -32,14 +32,6 @@
   margin-top: 5px;
 }
 
-.flatpickr-monthDropdown-months {
-  background: none;
-  border: none;
-  display: inline-block;
-  text-transform: uppercase;
-  color: var(--black);
-}
-
 .flatpickr-calendar.inline {
   display: block;
   position: relative;
