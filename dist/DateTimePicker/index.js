@@ -65,6 +65,10 @@ function (_React$Component) {
       _this.flatpickr = (0, _flatpickr.default)(_this.dateTimePicker, options);
     });
 
+    _defineProperty(_assertThisInitialized(_assertThisInitialized(_this)), "openFlatpickr", function () {
+      if (_this.flatpickr) _this.flatpickr.open();
+    });
+
     return _this;
   }
 
@@ -75,8 +79,7 @@ function (_React$Component) {
     }
   }, {
     key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
-      this.attachFlatpickr(nextProps);
+    value: function componentWillReceiveProps(nextProps) {// this.attachFlatpickr(nextProps);
     }
   }, {
     key: "render",
