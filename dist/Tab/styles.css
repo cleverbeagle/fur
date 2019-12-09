@@ -1,6 +1,10 @@
 .fur-tabs-tab {
-  padding: 0 0 8px;
+  padding: 10px 20px;
   position: relative;
+  border: 1px solid transparent;
+  border-top: none;
+  margin-bottom: -1px;
+  border-radius: 3px 3px 0 0;
 }
 
 .fur-tabs-tab:hover {
@@ -15,8 +19,14 @@
   color: var(--black-medium);
   font-size: 12px;
   letter-spacing: 0.02em;
-  font-weight: normal;
+  font-weight: 600;
   text-transform: uppercase;
+}
+
+.fur-tabs-tab-active {
+  border: 1px solid var(--black-light);
+  border-top: none;
+  border-bottom: 1px solid #fff;
 }
 
 .fur-tabs-tab-active > .fur-tabs-tab-title,
@@ -28,11 +38,12 @@
   content: "";
   display: block;
   position: absolute;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  height: 2px;
+  top: 0px;
+  left: -1px;
+  right: -1px;
+  height: 3px;
   background: var(--primary);
+  border-radius: 3px 3px 0 0;
 }
 
 @media screen and (min-width: 768px) {
