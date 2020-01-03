@@ -16,6 +16,8 @@
 }
 
 .fur-form-select select {
+  position: relative;
+  z-index: 1;
   color: var(--black);
   border: 1px solid var(--black-light);
   border-radius: 3px;
