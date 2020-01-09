@@ -1,6 +1,6 @@
 {
   "name": "@cleverbeagle/fur",
-  "version": "0.0.22-alpha",
+  "version": "0.0.23-alpha",
   "description": "The ultimate UI kit for products.",
   "main": "dist/index.min.js",
   "scripts": {
