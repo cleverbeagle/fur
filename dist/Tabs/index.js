@@ -78,13 +78,9 @@ function (_React$Component) {
     value: function componentWillReceiveProps(nextProps) {
       var newActiveTab = _lodash.default.get(nextProps, 'activeTab', null);
 
-      var activeTab = this.state.activeTab;
-
-      if (newActiveTab && newActiveTab !== activeTab) {
-        this.setState({
-          activeTab: newActiveTab
-        });
-      }
+      this.setState({
+        activeTab: newActiveTab
+      });
     }
   }, {
     key: "render",

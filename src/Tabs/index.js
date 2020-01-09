@@ -14,11 +14,7 @@ class Tabs extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     const newActiveTab = _.get(nextProps, 'activeTab', null);
-    const { activeTab } = this.state;
-
-    if (newActiveTab && newActiveTab !== activeTab) {
-      this.setState({ activeTab: newActiveTab });
-    }
+    this.setState({ activeTab: newActiveTab });
   }
 
   validateChildrenAreTabs = (children) =>
