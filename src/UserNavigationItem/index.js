@@ -6,10 +6,18 @@ import Button from '../Button';
 class UserNavigationItem extends React.Component {
   state = { open: false };
 
+  componentDidMount() {
+    document.body.addEventListener('click', this.handleOpenCloseMenu);
+  }
+
   toggleMenu = () => {
     this.setState((state) => ({
       open: !state.open,
     }));
+  };
+
+  handleOpenCloseMenu = () => {
+    this.setState({ open: false });
   };
 
   render() {
